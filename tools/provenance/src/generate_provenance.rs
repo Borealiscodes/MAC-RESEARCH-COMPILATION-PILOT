@@ -7,6 +7,7 @@ pub fn main() {
     let args: Vec<String> = std::env::args().collect();
     let commit_message = args.get(1).expect("Missing commit message");
 
+    // Embedded grammar file
     let grammar: Value = serde_json::from_str(
         include_str!("visual-grammar.json")
     ).unwrap();
