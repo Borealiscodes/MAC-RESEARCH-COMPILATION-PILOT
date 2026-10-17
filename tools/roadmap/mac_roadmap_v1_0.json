@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "system": "MAC-RESEARCH-COMPILATION-PILOT",
+  "roadmap": {
+    "populate_order": [
+      {
+        "stage": 1,
+        "name": "Ontology Backbone",
+        "paths": ["ontology/"],
+        "altitude": "A2",
+        "membrane": "Structural",
+        "reason": "All other subsystems depend on altitude geometry + membrane semantics."
+      },
+      {
+        "stage": 2,
+        "name": "Provenance Layer",
+        "paths": ["provenance/", "tools/provenance/"],
+        "altitude": "A5",
+        "membrane": "Provenance",
+        "reason": "Lineage, seals, contamination guards must exist before content is added."
+      },
+      {
+        "stage": 3,
+        "name": "Diagnostics + Guards",
+        "paths": ["tools/pseudocode/", "code/lean/"],
+        "altitude": "A4",
+        "membrane": "Diagnostic",
+        "reason": "Anti-hallucination + contamination logic must be stable before runtime."
+      },
+      {
+        "stage": 4,
+        "name": "Runtime Kernels",
+        "paths": ["code/rust/"],
+        "altitude": "A3",
+        "membrane": "Formal",
+        "reason": "Deterministic kernels support provenance, ontology, and NDH operators."
+      },
+      {
+        "stage": 5,
+        "name": "Ecosystem Linkage",
+        "paths": ["ecosystem/"],
+        "altitude": "Forest",
+        "membrane": "Neutral",
+        "reason": "NDH, Shared Horizon, Triangle Mutiny accessibility layers must be linked."
+      },
+      {
+        "stage": 6,
+        "name": "Reference Corpus",
+        "paths": ["references/"],
+        "altitude": "A1",
+        "membrane": "Neutral",
+        "reason": "APA/BibTeX + altitude-tagged references support preprint citations."
+      },
+      {
+        "stage": 7,
+        "name": "Preprint Spine",
+        "paths": ["preprint/"],
+        "altitude": "Cross-Altitude",
+        "membrane": "Neutral",
+        "reason": "Preprint is populated last, once all supporting subsystems are stable."
+      }
+    ],
+    "contamination_rules": {
+      "forbidden_pairs": [
+        ["A0", "A3"],
+        ["A1", "A2"]
+      ],
+      "description": "Forbidden altitude transitions without harmonization operators."
+    },
+    "provenance": {
+      "compiler": "MAC-RESEARCH-COMPILATION-PILOT",
+      "seal": "MAC_v1_0"
+    }
+  }
+}
