@@ -8,7 +8,7 @@ pub fn main() {
     let commit_message = args.get(1).expect("Missing commit message");
 
     let grammar: Value = serde_json::from_str(
-        &fs::read_to_string("visual-grammar.json").unwrap()
+        include_str!("visual-grammar.json")
     ).unwrap();
 
     let gitmoji = &commit_message[0..2];
