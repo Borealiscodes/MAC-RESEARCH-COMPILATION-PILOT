@@ -25,7 +25,7 @@ jobs:
         run: cargo build --release --manifest-path tools/provenance/Cargo.toml
 
       - name: Generate provenance log
-        run: ./target/release/provenance-generator "${{ github.event.head_commit.message }}"
+        run: tools/provenance/target/release/provenance-generator "${{ github.event.head_commit.message }}"
 
       - name: Commit provenance log
         run: |
