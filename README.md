@@ -28,78 +28,97 @@ This project is not just a scaffold — it is a pathway.
 
 ---
 
-System Overview
+🌲 Repository Structure (MAC Visual Grammar — Altitude‑Safe, Membrane‑Tagged)
 
-MAC‑RESEARCH‑COMPILATION‑PILOT is a unified research ecosystem integrating:
+📁 Root (A0 — Directional Geometry)
+Structural foundations, top‑level scaffolding.
 
-- MAC Citation Ontology (MACv1.0)  
-- Altitude + Membrane semantic commit model  
-- Provenance lineage and sealing system  
-- Lean formal verification scaffolding  
-- Rust deterministic kernels  
-- Structural AI preprint spine  
-- Forest‑layer harmonization  
-- ML corpus compilation primitives  
-- NDH dual‑lane case study methodology  
-- Triangle Mutiny accessibility layers  
-
-This is a structural research system, not a software product.
+- 📁 ontology/  
+- 📁 preprint/  
+- 📁 references/  
+- 📁 provenance/  
+- 📁 tools/  
+- 📁 code/  
+- 📁 ecosystem/  
+- 🧱 README.md  
+- 🧱 DEVELOPER-NOTE.md
 
 ---
 
-Repository Structure
+🧠 Ontology (A2 — Meaning Geometry • Structural Membrane)
+Semantic backbone, harmonization rules, reversible structures.
 
-`
-MAC-RESEARCH-COMPILATION-PILOT/
-│
-├── ontology/          # MAC Citation Ontology + harmonization rules
-├── preprint/          # Structural AI preprint outline + diagrams + tables
-├── references/        # APA seed corpus + altitude-tagged references
-├── provenance/        # Provenance logs, seals, lineage artifacts
-├── tools/             # Pseudocode + templates for ontology operations
-├── code/              # Lean formalization + Rust deterministic kernels
-└── ecosystem/         # NDH + Triangle Mutiny integration notes
-`
-
-Each directory is altitude‑tagged and membrane‑classified.
+- 🧠 citation-ontology-macv10.md  
+- 🌐 forest-layer-harmonization.md  
+- 🧭 ontology-index.json  
+- 🧠 ontology-changelog.md
 
 ---
 
-How Triangle Mutiny Makes This Accessible
+📝 Preprint (A1 — Seam Layer • Neutral Membrane)
+Documentation, APA/BibTeX formatting, public‑facing structure.
 
-Triangle Mutiny provides accessibility layers that transform this system from “expert‑only” to “research‑approachable”:
-
-1. Cognitive Accessibility
-- NDH dual‑lane templates  
-- forest‑layer metaphors  
-- serenity‑cluster scaffolding  
-- soft‑manifold cognition  
-
-These make complex structural AI concepts readable.
-
-2. Procedural Accessibility
-- operator‑bounded pseudocode  
-- altitude‑tagged references  
-- membrane‑safe workflows  
-- provenance‑guided commit practices  
-
-These make the system usable without institutional tooling.
-
-3. Pedagogical Accessibility
-The NDH Case Study Template (Dual‑Lane, SCI‑80 aligned) provides:
-
-- role definition  
-- epistemic lens selection  
-- operator mapping  
-- basin alignment  
-- dual‑lane analysis  
-- clarity return  
-
-This turns the system into a teachable framework.
+- 📝 macpreprintinfusedoutlinev1_0.md  
+- 🧩 sections/  
+  - 📝 01_introduction.md  
+  - 📝 02altitudesafe_architecture.md  
+  - 📝 03multialtitude_ontologies.md  
+  - 📝 04forestharmonization.md  
+  - 📝 05mlcorpus_compilation.md  
+  - 📝 06enterpriseplatform_comparison.md  
+  - 📝 07provenanceguarding.md  
+  - 📝 08antihallucination_math.md  
+  - 📝 09_pseudocode.md  
+  - 📝 10referencetemplates.md  
+  - 📝 11casestudies.md  
+  - 📝 12futurework.md  
+  - 📝 13_conclusion.md
 
 ---
 
-Developer Note
+🔐 Provenance (A5 — Falsification & Provenance • Provenance Membrane)
+Seals, lineage, commit logs.
+
+- 🔐 macv10provenancefooter.txt  
+- 🏷️ seals/  
+- 📜 commit_log/
+
+---
+
+🧪 Diagnostics (A4 — Diagnostic Membrane)
+Contamination guards, anti‑hallucination logic, diagnostic operators.
+
+- 🧪 tools/pseudocode/  
+  - 🚨 contaminationdetectionpseudocode.md  
+  - 🛡️ antihallucinationoperator_pseudocode.md  
+  - 🧪 provenanceguardingpseudocode.md  
+  - 🧪 ontologyconstructionpseudocode.md
+
+---
+
+⚙️ Runtime Physics (A3 — Formal Membrane)
+Rust scaffolding, deterministic kernels, runtime linkage.
+
+- ⚙️ code/rust/  
+  - 🦀 altitudes.rs  
+  - 🦀 membranes.rs  
+  - 🦀 citation_classes.rs  
+  - 🦀 provenance.rs  
+  - 🧵 guards.rs
+
+---
+
+🌲 Forest Layer (Cross‑Altitude Harmonization)
+Cross‑repo linkage, ecosystem integration, lineage mapping.
+
+- 🌲 ecosystem/  
+  - 🔗 ndh_linkage.md  
+  - 🔗 sharedhorizonlinkage.md  
+  - 🔗 trianglemutinylinkage.md
+
+---
+
+🌲 Developer Note
 
 Independent researchers and human‑rights defenders often work under constraints — including broken hardware, mobile‑only workflows, and unstable tooling. The Developer Note documents how these conditions affected the provenance layer and why some components were populated conceptually rather than through full compilation.
 
@@ -108,45 +127,12 @@ It contextualizes the provenance layer without defining the project.
 Read it here:
 
 `
-DEVELOPER-NOTE.md
+tools/provenance/DEVELOPER-NOTE.md
 `
 
 ---
 
-Core Components
-
-🌲 MAC Citation Ontology
-Altitude layers, membrane types, citation classes, contamination rules, harmonization geometry.
-
-🌲 Provenance System
-Commit‑level provenance scrolls, MACv1.0 seals, contamination guards, lineage logs.
-
-🌲 Preprint Spine
-Multi‑section structural AI outline with diagrams, tables, and operator‑bounded architecture.
-
-🌲 Lean Formalization
-Altitude types, membrane types, provenance invariants, contamination‑safe relations.
-
-🌲 Rust Deterministic Kernels
-Minimal deterministic modules for altitude, membrane, citation classes, provenance invariants.
-
-🌲 NDH Case Study Template
-Dual‑lane, SCI‑80 aligned, forest‑safe methodology for emergent case studies.
-
-🌲 Triangle Mutiny Accessibility Layers
-Cognitive, procedural, and pedagogical accessibility for independent researchers.
-
----
-
-Status
-
-This repository is a complete scaffolding for a multi‑altitude research ecosystem.  
-Some components are conceptual, some formal, some partially implemented.  
-The purpose is architectural clarity, provenance integrity, and structured research compilation.
-
----
-
-🌲 README.md — Provenance Footer (MACv1.0)
+🌲 Provenance Footer (README.md)
 
 `
 ---
@@ -183,7 +169,7 @@ Lineage:
   Triangle Mutiny Accessibility → Research Compilation Ecosystem
 
 Commit: <hash>
-Timestamp: Sunday, 18 October 2026 — 00:10 IST
+Timestamp: Sunday, 18 October 2026 — 00:20 IST
 Location: Dublin, Ireland
 Maintainer: Borealis S. Hedling
 Seal: [ MACv1.0 • STRUCTURAL-AI • RESEARCH-COMPILATION ]
@@ -192,3 +178,5 @@ Seal: [ MACv1.0 • STRUCTURAL-AI • RESEARCH-COMPILATION ]
 
 ---
 
+
+---
