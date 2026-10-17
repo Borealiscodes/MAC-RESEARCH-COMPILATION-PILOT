@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "system": "MAC-RESEARCH-COMPILATION-PILOT",
+  "tracker": {
+    "stages": [
+      {
+        "id": "A2-ONTOLOGY",
+        "name": "Ontology Backbone",
+        "altitude": "A2",
+        "membrane": "Structural",
+        "paths": ["ontology/"],
+        "status": "incomplete",
+        "tasks": [
+          "Populate citation-ontology-macv10.md",
+          "Populate forest-layer-harmonization.md",
+          "Populate ontology-index.json",
+          "Populate ontology-changelog.md"
+        ],
+        "reason": "All subsystems depend on altitude geometry + membrane semantics."
+      },
+      {
+        "id": "A5-PROVENANCE",
+        "name": "Provenance Layer",
+        "altitude": "A5",
+        "membrane": "Provenance",
+        "paths": ["provenance/", "tools/provenance/"],
+        "status": "incomplete",
+        "tasks": [
+          "Populate provenance seals",
+          "Populate commit_log/",
+          "Populate DEVELOPER-NOTE.md",
+          "Add provenance footers to major artifacts"
+        ],
+        "reason": "Lineage, seals, contamination guards must exist before content."
+      },
+      {
+        "id": "A4-DIAGNOSTICS",
+        "name": "Diagnostics + Guards",
+        "altitude": "A4",
+        "membrane": "Diagnostic",
+        "paths": ["tools/pseudocode/", "code/lean/"],
+        "status": "incomplete",
+        "tasks": [
+          "Populate contamination detection pseudocode",
+          "Populate anti-hallucination operator pseudocode",
+          "Populate provenance guarding pseudocode",
+          "Populate ontology construction pseudocode",
+          "Populate Lean invariants (Altitude, Membrane, CitationClass, ProvenanceInvariant)"
+        ],
+        "reason": "Diagnostic logic must be stable before runtime kernels."
+      },
+      {
+        "id": "A3-RUNTIME",
+        "name": "Runtime Kernels",
+        "altitude": "A3",
+        "membrane": "Formal",
+        "paths": ["code/rust/"],
+        "status": "incomplete",
+        "tasks": [
+          "Populate altitudes.rs",
+          "Populate membranes.rs",
+          "Populate citation_classes.rs",
+          "Populate provenance.rs",
+          "Populate guards.rs"
+        ],
+        "reason": "Deterministic kernels support provenance, ontology, NDH operators."
+      },
+      {
+        "id": "FOREST-LINKAGE",
+        "name": "Ecosystem Linkage",
+        "altitude": "Forest",
+        "membrane": "Neutral",
+        "paths": ["ecosystem/"],
+        "status": "incomplete",
+        "tasks": [
+          "Populate ndh_linkage.md",
+          "Populate sharedhorizonlinkage.md",
+          "Populate trianglemutinylinkage.md"
+        ],
+        "reason": "NDH, Shared Horizon, Triangle Mutiny accessibility layers must link."
+      },
+      {
+        "id": "A1-REFERENCES",
+        "name": "Reference Corpus",
+        "altitude": "A1",
+        "membrane": "Neutral",
+        "paths": ["references/"],
+        "status": "incomplete",
+        "tasks": [
+          "Populate apaseedcorpusv10.bib",
+          "Populate citationblocksexamples.md",
+          "Populate reference-changelog.md",
+          "Populate altitudetaggedreferences.json"
+        ],
+        "reason": "APA/BibTeX + altitude-tagged references support preprint citations."
+      },
+      {
+        "id": "X-PREPRINT",
+        "name": "Preprint Spine",
+        "altitude": "Cross-Altitude",
+        "membrane": "Neutral",
+        "paths": ["preprint/"],
+        "status": "pending",
+        "tasks": [
+          "Populate macpreprintinfusedoutlinev1_0.md",
+          "Populate all section files",
+          "Populate diagrams and tables"
+        ],
+        "reason": "Preprint is populated last once all supporting subsystems are stable."
+      }
+    ],
+    "contamination_rules": {
+      "forbidden_pairs": [
+        ["A0", "A3"],
+        ["A1", "A2"]
+      ],
+      "description": "Forbidden altitude transitions without harmonization operators."
+    },
+    "provenance": {
+      "compiler": "MAC-RESEARCH-COMPILATION-PILOT",
+      "seal": "MAC_v1_0",
+      "timestamp": "Sunday, 18 October 2026 — 00:40 IST",
+      "location": "Dublin, Ireland",
+      "maintainer": "Borealis S. Hedling"
+    }
+  }
+}
