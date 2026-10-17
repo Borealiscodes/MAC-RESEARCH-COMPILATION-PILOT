@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "ontology": "MAC-Visual-Grammar",
+  "description": "Gitmoji-based visual grammar for altitude-safe, membrane-tagged commits in MAC-RESEARCH-COMPILATION-PILOT.",
+  "altitudes": {
+    "A0": {
+      "name": "Directional Geometry",
+      "membrane": "Neutral",
+      "gitmoji": ["📁", "🧱"],
+      "meaning": "Scaffolding, directory creation, structural foundations.",
+      "allowed_paths": ["root", "ontology/", "preprint/", "references/", "provenance/", "tools/", "code/", "ecosystem/"]
+    },
+    "A1": {
+      "name": "Seam Layer",
+      "membrane": "Neutral",
+      "gitmoji": ["📝", "🧩", "🔧"],
+      "meaning": "Templates, documentation, APA/BibTeX formatting.",
+      "allowed_paths": ["references/", "tools/templates/", "preprint/sections/"]
+    },
+    "A2": {
+      "name": "Meaning Geometry",
+      "membrane": "Structural",
+      "gitmoji": ["🧠", "🌐", "🧭"],
+      "meaning": "Ontology logic, harmonization rules, reversible structures.",
+      "allowed_paths": ["ontology/", "ontology/forest-layer-harmonization.md", "preprint/mac_preprint_infused_outline_v1_0.md"]
+    },
+    "A3": {
+      "name": "Runtime Physics",
+      "membrane": "Formal",
+      "gitmoji": ["⚙️", "🦀", "🧵"],
+      "meaning": "Rust scaffolding, deterministic kernels, runtime linkage.",
+      "allowed_paths": ["code/rust/", "ecosystem/triangle_mutiny_linkage.md"]
+    },
+    "A4": {
+      "name": "Diagnostics",
+      "membrane": "Diagnostic",
+      "gitmoji": ["🧪", "🚨", "🛡️"],
+      "meaning": "Diagnostic operators, contamination guards, anti-hallucination logic.",
+      "allowed_paths": ["tools/pseudocode/", "code/lean/"]
+    },
+    "A5": {
+      "name": "Falsification & Provenance",
+      "membrane": "Provenance",
+      "gitmoji": ["🔐", "🏷️", "📜"],
+      "meaning": "Provenance rules, seals, commit logs.",
+      "allowed_paths": ["provenance/", "provenance/seals/", "provenance/commit_log/"]
+    },
+    "Forest": {
+      "name": "Cross-Altitude Harmonization",
+      "membrane": "Neutral",
+      "gitmoji": ["🌲", "🔗", "🧬"],
+      "meaning": "Cross-repo linkage, harmonization, lineage mapping.",
+      "allowed_paths": ["ontology/forest-layer-harmonization.md", "ecosystem/"]
+    }
+  },
+  "contamination_rules": {
+    "forbidden_pairs": [
+      ["A0", "A3"],
+      ["A1", "A2"]
+    ],
+    "description": "Forbidden altitude transitions without harmonization operators."
+  },
+  "provenance": {
+    "compiler": "MAC-RESEARCH-COMPILATION-PILOT",
+    "seal": "MAC_v1_0"
+  }
+}
