@@ -1,0 +1,33 @@
+name: MAC Provenance Generator
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build provenance generator
+        run: cargo build --release
+
+      - name: Generate provenance log
+        run: ./target/release/generate_provenance "${{ github.event.head_commit.message }}"
+
+      - name: Commit provenance log
+        run: |
+          git config user.name "MAC Provenance Bot"
+          git config user.email "provenance@mac-system"
+          git add provenance/commit_log/*.txt
+          git commit -m "📜 Add automated provenance log"
+          git push
