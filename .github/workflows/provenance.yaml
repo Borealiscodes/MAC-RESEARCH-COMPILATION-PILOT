@@ -22,7 +22,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Build provenance generator
-        run: cargo build --release
+        run: cargo build --release --manifest-path tools/provenance/Cargo.toml
 
       - name: Generate provenance log
         run: ./target/release/generate_provenance "${{ github.event.head_commit.message }}"
