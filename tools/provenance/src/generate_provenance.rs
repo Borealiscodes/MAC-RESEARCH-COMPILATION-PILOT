@@ -3,7 +3,7 @@ use std::process::Command;
 use serde_json::Value;
 use chrono::Utc;
 
-fn main() {
+pub fn main() {
     let args: Vec<String> = std::env::args().collect();
     let commit_message = args.get(1).expect("Missing commit message");
 
@@ -43,4 +43,4 @@ fn main() {
     fs::write(&out_path, provenance).unwrap();
 
     println!("Generated provenance log: {}", out_path);
-      }
+}
