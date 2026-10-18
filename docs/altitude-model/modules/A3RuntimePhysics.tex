@@ -1,0 +1,136 @@
+% ---------------------------------------------------------------------------
+% A3RuntimePhysics.tex
+% Altitude A3 — Euclidean Runtime Physics
+% Author: Borealis S. Hedling
+% Version: v1.0
+% ---------------------------------------------------------------------------
+
+\section{Altitude A3: Euclidean Runtime Physics}
+
+Altitude A3 defines the Euclidean runtime manifold on which MAC state evolution
+occurs. This altitude introduces runtime patches, reversible transitions,
+membrane-constrained operators, and contamination-safe invariants. All operators
+in A3 preserve adjacency, continuity, and Euclidean curvature.
+
+\subsection{Runtime Manifold}
+
+Let $M$ be the runtime manifold. A3 assumes:
+\[
+K(p) = 0 \quad \forall p \in M,
+\]
+ensuring Euclidean geometry. Runtime operators must preserve:
+\begin{itemize}
+  \item adjacency,
+  \item continuity,
+  \item bounded holonomy,
+  \item reversible transitions.
+\end{itemize}
+
+\subsection{Runtime Patches}
+
+A runtime patch is defined as:
+\[
+\mathcal{P} = (U, \mathcal{O}, \mathcal{M}),
+\]
+where:
+\begin{itemize}
+  \item $U$ is an open subset of $M$,
+  \item $\mathcal{O}$ is the admissible operator set,
+  \item $\mathcal{M}$ is the active membrane.
+\end{itemize}
+
+Each patch enforces membrane-specific invariants.
+
+\subsection{Membrane-Constrained Operators}
+
+An operator $T : U \rightarrow U$ is admissible in A3 if:
+\[
+T \in \mathcal{O} \quad \text{and} \quad T \text{ preserves } \mathcal{M}.
+\]
+
+Membrane constraints:
+\begin{itemize}
+  \item STRUCTURAL: adjacency-preserving, continuous.
+  \item FORMAL: type-preserving, reversible.
+  \item DIAGNOSTIC: non-destructive, idempotent.
+  \item PROVENANCE: monotone lineage accumulation.
+\end{itemize}
+
+\subsection{Adjacency Preservation}
+
+For any operator $T$ in A3:
+\[
+A(x,y) \Rightarrow A(T(x), T(y)),
+\]
+where $A$ is the adjacency relation. This ensures contamination-safe evolution.
+
+\subsection{Holonomy Boundedness}
+
+Runtime operators must satisfy:
+\[
+\| H_T(p) \| < \epsilon,
+\]
+where $H_T$ is the holonomy induced by $T$. This prevents spectral tearing and
+ensures compatibility with A4 spectral runtime.
+
+\subsection{Reversible Transitions}
+
+A3 requires:
+\[
+T^{-1} \text{ exists and is admissible}.
+\]
+This ensures deterministic altitude transitions and membrane reversibility.
+
+\subsection{Provenance Monotonicity}
+
+Let $\Pi$ be the provenance log. A3 enforces:
+\[
+\Pi_{t+1} = \Pi_t \cup \{e_t\},
+\]
+where $e_t$ is the event recorded at time $t$. Provenance must be monotone and
+membrane-consistent.
+
+\subsection{Euclidean Operator Examples}
+
+DiffusionGeometry provides Euclidean operators suitable for A3:
+\begin{itemize}
+  \item k-nearest-neighbour adjacency graphs,
+  \item adaptive kernel similarity matrices,
+  \item continuous Markov operators,
+  \item symmetric conjugate operators,
+  \item eigenfunctions of $P_{\mathrm{sym}}$.
+\end{itemize}
+
+These operators satisfy:
+\[
+K(p) = 0, \quad A(x,y) \Rightarrow A(T(x),T(y)), \quad \|H_T\| < \epsilon.
+\]
+
+They are admissible in A3 but do not interact with A6/A7.
+
+\subsection{Integration with Python Runtime Harness (A4.5)}
+
+The Python runtime harness implements:
+\begin{itemize}
+  \item altitude adjacency constraints,
+  \item membrane adjacency constraints,
+  \item determinism checks,
+  \item provenance monotonicity,
+  \item reversible transitions.
+\end{itemize}
+
+A3RuntimePhysics.tex defines the theoretical invariants that the harness enforces.
+
+% ---------------------------------------------------------------------------
+% Provenance
+% A3RuntimePhysics.tex
+% Author: Borealis S. Hedling
+% Altitude: A3
+% Surface: Structural-AI/Runtime-Physics
+% Version: v1.0
+% Created: 18 October 2026, Dublin, Ireland
+% Purpose: Define Euclidean runtime physics, membrane-constrained operators,
+%          reversible transitions, adjacency preservation, holonomy boundedness,
+%          and provenance monotonicity. Provides theoretical foundation for the
+%          Python A4.5 runtime harness and prepares for A4 spectral runtime.
+% ---------------------------------------------------------------------------
