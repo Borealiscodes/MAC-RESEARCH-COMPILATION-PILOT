@@ -9,21 +9,17 @@ Altitude A3 • Formal Membrane
 Artifact-Class: Runtime-Physics
 Artifact-Name: runtime-physics-constellation
 Surface: Structural-AI/Runtime-Physics
-Version: v1.1
+Version: v1.2
 Altitude: A3 (Runtime Physics)
 Membrane: Formal
 
 Purpose:
   Define the constellation-geometry runtime physics model for MACv1.0 using
-  visually structured sections, operator classes, and membrane callouts. This
-  artifact specifies runtime operators, reversible altitude transitions,
-  membrane-preserving activation rules, and contamination-safe runtime
-  invariants. It forms the conceptual foundation for deterministic kernels
-  implemented in Rust and Python.
+  stable section grammar, operator classes, membrane constraints, and reversible
+  transition rules. This artifact forms the conceptual foundation for
+  deterministic kernels implemented in Rust and Python.
 
-────────────────────────────────────────
 ⚙️ Runtime Physics Overview
-────────────────────────────────────────
 
 Runtime physics governs how MAC transitions between altitudes during active
 computation. Ontology defines meaning geometry; runtime physics defines
@@ -34,48 +30,42 @@ operational geometry.
 • Operators → runtime transitions  
 • Constellation → runtime coordinate system  
 
-────────────────────────────────────────
 🌌 Constellation Runtime Model
-────────────────────────────────────────
 
 The constellation model represents runtime states as nodes and transitions as
 edges. Each node corresponds to an altitude-specific runtime patch, and each
 edge corresponds to a membrane-constrained operator.
 
-Node (Runtime Patch):
-  • altitude-tagged  
-  • membrane-tagged  
-  • reversible  
+Node (Runtime Patch)
+• altitude-tagged  
+• membrane-tagged  
+• reversible  
 
-Edge (Runtime Transition):
-  • operator-activated  
-  • contamination-safe  
-  • deterministic  
+Edge (Runtime Transition)
+• operator-activated  
+• contamination-safe  
+• deterministic  
 
-Operator (Runtime Function):
-  • membrane-bounded  
-  • altitude-preserving  
-  • reversible unless provenance-bound  
+Operator (Runtime Function)
+• membrane-bounded  
+• altitude-preserving  
+• reversible unless provenance-bound  
 
-────────────────────────────────────────
 🧩 Runtime Node Diagram (ASCII-Safe)
-────────────────────────────────────────
 
-Nodes:
-  [A0] • [A1] • [A2] • [A3] • [A4] • [A5]
+Nodes:  
+[A0] • [A1] • [A2] • [A3] • [A4] • [A5]
 
-Edges:
-  A0 → A1 → A2 → A3 → A4 → A5
+Edges:  
+A0 → A1 → A2 → A3 → A4 → A5
 
-Reversal:
-  A5 ⇢ A4 ⇢ A3 ⇢ A2 ⇢ A1 ⇢ A0
+Reversal:  
+A5 ⇢ A4 ⇢ A3 ⇢ A2 ⇢ A1 ⇢ A0
 
-Membrane Constraints:
-  Structural → Formal → Diagnostic → Provenance
+Membrane Constraints:  
+Structural → Formal → Diagnostic → Provenance
 
-────────────────────────────────────────
 ⚙️ Operator Classes
-────────────────────────────────────────
 
 • 🔸 Activation Operator  
   Initiates a runtime transition.
@@ -89,43 +79,37 @@ Membrane Constraints:
 • 🔺 Guard Operator  
   Prevents contamination or membrane violation.
 
-Operator Requirements:
-  • deterministic  
-  • reversible (unless provenance-bound)  
-  • membrane-safe  
-  • altitude-preserving  
+Operator Requirements
+• deterministic  
+• reversible (unless provenance-bound)  
+• membrane-safe  
+• altitude-preserving  
 
-────────────────────────────────────────
 🛡️ Membrane Constraints
-────────────────────────────────────────
 
-Allowed Transitions:
-  • Structural → Formal  
-  • Formal → Diagnostic  
-  • Diagnostic → Provenance  
+Allowed Transitions:  
+• Structural → Formal  
+• Formal → Diagnostic  
+• Diagnostic → Provenance  
 
-Forbidden:
-  • Reverse transitions without reversal operators  
-  • Cross-altitude jumps  
-  • Membrane skipping  
+Forbidden:  
+• Reverse transitions without reversal operators  
+• Cross-altitude jumps  
+• Membrane skipping  
 
-────────────────────────────────────────
 🔁 Reversibility Rules
-────────────────────────────────────────
 
-Reversal operators must:
-  • restore previous runtime state  
-  • preserve membrane semantics  
-  • avoid contamination  
-  • maintain altitude invariants  
+Reversal operators must:  
+• restore previous runtime state  
+• preserve membrane semantics  
+• avoid contamination  
+• maintain altitude invariants  
 
-Reversal Diagram:
-  Forward:   A2 → A3 → A4  
-  Reverse:   A4 ⇢ A3 ⇢ A2  
+Reversal Diagram:  
+Forward:   A2 → A3 → A4  
+Reverse:   A4 ⇢ A3 ⇢ A2  
 
-────────────────────────────────────────
 📐 Runtime Invariants
-────────────────────────────────────────
 
 • No altitude skipping  
 • No membrane violation  
@@ -133,9 +117,7 @@ Reversal Diagram:
 • All transitions deterministic  
 • All transitions logged in provenance layer  
 
-────────────────────────────────────────
 🦀 Rust Integration
-────────────────────────────────────────
 
 Rust modules implementing this runtime physics:
 
@@ -145,9 +127,7 @@ Rust modules implementing this runtime physics:
 • provenance.rs  
 • guards.rs  
 
-────────────────────────────────────────
 🐍 Python Integration
-────────────────────────────────────────
 
 Python scaffolding provides:
 
@@ -155,27 +135,25 @@ Python scaffolding provides:
 • runtime validation  
 • diagnostic hooks  
 
-────────────────────────────────────────
 🔗 Relationship to Ontology
-────────────────────────────────────────
 
-Ontology Layer (A2):
-  • defines meaning geometry  
-  • defines harmonization geometry  
-  • defines coordinate systems  
+Ontology Layer (A2):  
+• defines meaning geometry  
+• defines harmonization geometry  
+• defines coordinate systems  
 
-Runtime Physics Layer (A3):
-  • defines operational geometry  
-  • defines activation rules  
-  • defines reversible transitions  
+Runtime Physics Layer (A3):  
+• defines operational geometry  
+• defines activation rules  
+• defines reversible transitions  
 
 Constellation runtime physics is the operational counterpart to constellation
 harmonization in the ontology layer.
 
-Maintainer: Borealis S. Hedling
-Compiler: Microsoft Copilot
-Location: Dublin, Ireland
-Timestamp: 18 October 2026 — 02:10 IST
+Maintainer: Borealis S. Hedling  
+Compiler: Microsoft Copilot  
+Location: Dublin, Ireland  
+Timestamp: 18 October 2026 — 02:14 IST  
 Seal: [ RUNTIME-PHYSICS • CONSTELLATION • MACv10 ]
 ---
 `
