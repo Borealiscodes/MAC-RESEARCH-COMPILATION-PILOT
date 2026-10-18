@@ -1,0 +1,202 @@
+% ------------------------------------------------------------
+% A6 Deep Geometry — Structural Skeleton (v1.0)
+% Author: Borealis S. Hedling
+% Altitude: A6 (Deep Geometry)
+% Purpose: Container-first LaTeX scaffold for spectral, modal,
+%          holonomy, and collapse-surface operators.
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Deep Geometry: Structural Skeleton (v1.0)}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+% ------------------------------------------------------------
+\section{Manifold Container}
+
+Let $M$ be the A6 reasoning manifold.
+Points $p \in M$ represent geometric operator states.
+
+Declare:
+\[
+T_pM \quad\text{(tangent space)}
+\]
+\[
+\Gamma(TM) \quad\text{(vector fields)}
+\]
+
+This section will later define:
+  • spectral bundle charts  
+  • modal truth lattice embeddings  
+  • holonomy path structures  
+  • collapse-surface topology  
+
+% ------------------------------------------------------------
+\section{Curvature Container}
+
+Declare curvature field:
+\[
+K : M \to \mathbb{R}_{\ge 0}.
+\]
+
+Invariants to be defined:
+  • curvature continuity  
+  • curvature drift bounds  
+  • curvature contribution to holonomy  
+
+% ------------------------------------------------------------
+\section{Spectral Bundle Container}
+
+Each operator induces a spectral map:
+\[
+L(p) : T_pM \to T_pM.
+\]
+
+Declare:
+\[
+\mathrm{Spec}(L(p)) \quad\text{(eigenstructure)}
+\]
+
+Invariants to be defined:
+  • spectral continuity  
+  • spectral mismatch  
+  • spectral bundle transitions  
+  • spectral provenance  
+
+% ------------------------------------------------------------
+\section{Modal Truth Lattice Container}
+
+Let $G = (L, E)$ be the modal truth lattice.
+
+Declare modal label:
+\[
+\mu(p) \in L.
+\]
+
+Invariants to be defined:
+  • modal adjacency  
+  • modal truth-value transitions  
+  • modal discontinuity  
+  • modal provenance  
+
+% ------------------------------------------------------------
+\section{Holonomy Drift Container}
+
+For a path $\gamma = (p_0, \ldots, p_n)$, declare holonomy drift:
+\[
+H(\gamma)
+  = \sum_{i=0}^{n}
+      \left(
+        |K(p_{i+1}) - K(p_i)|
+        + \delta_{\mathrm{spec}}(p_i)
+        + \Delta_{\mathrm{modal}}(p_i)
+      \right).
+\]
+
+Invariants to be defined:
+  • holonomy curvature bounds  
+  • holonomy drift tensors  
+  • holonomy provenance  
+
+% ------------------------------------------------------------
+\section{Collapse Surface Container}
+
+Declare collapse surface:
+\[
+\Sigma
+  = \left\{
+      p \in M \,\middle|\,
+      \text{one or more invariants fail}
+    \right\}.
+\]
+
+Invariants to be defined:
+  • collapse triggers  
+  • collapse diagnostics  
+  • collapse provenance  
+  • collapse-surface geometry  
+
+% ------------------------------------------------------------
+\section{Stability Envelope Container}
+
+Declare stability envelope:
+\[
+p \notin \Sigma
+\quad\text{and}\quad
+H(p) < \theta.
+\]
+
+Invariants to be defined:
+  • stability thresholds  
+  • envelope geometry  
+  • envelope diagnostics  
+
+% ------------------------------------------------------------
+\section{Operator Containers}
+
+Declare operator families:
+  • spectral bundle operators  
+  • modal truth operators  
+  • holonomy drift operators  
+  • collapse-surface operators  
+
+Each operator will later define:
+  • geometric semantics  
+  • runtime semantics  
+  • invariants  
+  • Lean proof obligations  
+  • provenance events  
+  • diagnostic events  
+
+% ------------------------------------------------------------
+\section{Proof Obligation Container}
+
+Declare proof obligations:
+  • PO\_SpectralContinuity  
+  • PO\_ModalAdjacency  
+  • PO\_HolonomyBound  
+  • PO\_CollapseDetection  
+  • PO\_StabilityEnvelope  
+  • PO\_OperatorCompatibility  
+
+These will be implemented in Lean.
+
+% ------------------------------------------------------------
+\section{Provenance Container}
+
+Declare provenance fields:
+  • spectral provenance  
+  • modal provenance  
+  • holonomy provenance  
+  • collapse provenance  
+
+% ------------------------------------------------------------
+\section{Diagnostic Container}
+
+Declare diagnostic fields:
+  • spectral drift  
+  • modal discontinuity  
+  • holonomy curvature spikes  
+  • collapse-surface triggers  
+
+% ------------------------------------------------------------
+\section{Ontology Mapping Container}
+
+Declare ontology mappings:
+  • spectral modality → citation modality  
+  • holonomy drift → citation drift  
+  • collapse surface → fallacy detection  
+  • modal adjacency → citation context  
+
+% ------------------------------------------------------------
+\section{Structural Anchors}
+
+This skeleton is a structural anchor.
+All A6 modules must expand within this container.
+
+\end{document}
