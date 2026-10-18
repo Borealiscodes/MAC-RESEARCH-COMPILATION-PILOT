@@ -1,0 +1,123 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A7 Divergence Membrane}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This document defines the divergence membrane for A7 dual-algebra systems. The
+divergence membrane is a geometric structure that captures the onset of
+divergence behavior in operator execution. It generalizes the A6 safety envelope
+and unified kernel by introducing divergence invariants, divergence operators,
+divergence collapse surfaces, and divergence stability envelopes. The membrane
+provides the boundary between stable A6 geometry and divergent A7 geometry.
+
+\section{Divergence Geometry}
+Let $X$ be the base manifold and $S$ the A6 safety envelope. The divergence
+membrane $M \subset X$ is defined as:
+\[
+M = \{ p \in X \mid E(p) = \epsilon_S \},
+\]
+where $E$ is the stability-envelope function and $\epsilon_S$ is the global
+safety threshold.
+
+Thus, $M$ is the boundary of the A6 safety envelope:
+\[
+M = \partial S.
+\]
+
+\section{Divergence Invariants}
+Divergence invariants measure deviation from A6 stability:
+\[
+I_{\text{div}}(p) = E(p) - \epsilon_S.
+\]
+
+A point is divergent when:
+\[
+I_{\text{div}}(p) > 0.
+\]
+
+Divergence invariants must satisfy:
+\[
+I_{\text{div}}(p) = 0 \quad \text{for all } p \in M.
+\]
+
+\section{Divergence Operators}
+A divergence operator is a map:
+\[
+D_{\text{op}} : X \to X
+\]
+that increases divergence invariants:
+\[
+I_{\text{div}}(D_{\text{op}}(p)) \geq I_{\text{div}}(p).
+\]
+
+Operators must satisfy:
+\[
+p \in S \implies D_{\text{op}}(p) \in S \cup M.
+\]
+
+\section{Divergence Collapse Surfaces}
+Divergence collapse surfaces $\Sigma_{\text{div}}$ are defined as:
+\[
+\Sigma_{\text{div}} = \{ p \mid I_{\text{div}}(p) = c \},
+\]
+for some constant $c > 0$.
+
+These surfaces represent regions where divergence becomes geometrically
+significant.
+
+Collapse surfaces must satisfy:
+\[
+T_p M + T_p \Sigma_{\text{div}} = T_p X.
+\]
+
+\section{Divergence Stability Envelope}
+The divergence stability envelope $E_{\text{div}}$ is defined as:
+\[
+E_{\text{div}}(p) = \max(0, I_{\text{div}}(p)).
+\]
+
+It measures the magnitude of divergence.
+
+The envelope must satisfy:
+\[
+E_{\text{div}}(p) = 0 \quad \text{for } p \in M.
+\]
+
+\section{Divergence Kernel}
+The divergence kernel $K_{\text{div}}$ is defined as:
+\[
+K_{\text{div}} = \{ p \mid I_{\text{div}}(p) = 0 \}.
+\]
+
+Thus:
+\[
+K_{\text{div}} = M.
+\]
+
+The divergence kernel acts as a firewall preventing uncontrolled divergence:
+\[
+p \in M \implies D_{\text{op}}(p) \in M.
+\]
+
+\section{Membrane Interaction}
+The divergence membrane interacts with A6 geometry via:
+\[
+T_p M \subseteq T_p S.
+\]
+
+This ensures that divergence behavior is constrained by A6 stability.
+
+\section*{Conclusion}
+The divergence membrane defines the boundary between stable A6 geometry and
+divergent A7 geometry. It introduces divergence invariants, divergence operators,
+divergence collapse surfaces, divergence stability envelopes, and a divergence
+kernel. This document provides the foundation for A7 operator algebra and
+A7 runtime diagnostics.
+
+\end{document}
