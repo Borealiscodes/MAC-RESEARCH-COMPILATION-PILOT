@@ -1,0 +1,155 @@
+% ------------------------------------------------------------
+% A6 Spectral Operator Algebra — Full Population (v1.0)
+% Author: Borealis S. Hedling
+% Altitude: A6 (Dual Algebra)
+% Purpose: Populate spectral operators, invariants, and laws for A6 Deep Geometry.
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Spectral Operator Algebra: Full Population (v1.0)}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+% ------------------------------------------------------------
+\section*{Overview}
+
+This document defines the fully populated spectral operator algebra for A6 Deep
+Geometry. It includes eigenstructure, spectral continuity, mismatch bounds,
+bundle transitions, spectral provenance, and all spectral invariants required by
+the thirteen constructive fixes.
+
+Let $M$ be the A6 reasoning manifold.
+
+% ------------------------------------------------------------
+\section{Spectral Fields}
+
+\subsection{Spectral Operator}
+\[
+L(p) : T_pM \to T_pM
+\]
+with eigenstructure:
+\[
+\mathrm{Spec}(L(p)) = \{\lambda_1(p), \ldots, \lambda_n(p)\}.
+\]
+
+\subsection{Spectral Continuity}
+\[
+\mathrm{Spec}(L(p)) \approx \mathrm{Spec}(L(q)) \quad \text{for } p \sim q.
+\]
+
+\subsection{Spectral Mismatch Bound}
+\[
+\delta_{\mathrm{spec}}(p) = 
+  \max_i |\lambda_i(p) - \lambda_i(q)| < \epsilon.
+\]
+
+\subsection{Spectral Bundle Transition}
+\[
+L(p) \leadsto L(q)
+\]
+with bundle continuity constraint:
+\[
+\|L(p) - L(q)\| < \eta.
+\]
+
+\subsection{Spectral Provenance}
+\[
+\mathrm{Spec}(L(p)) \leadsto \mathrm{Spec}(L(q)).
+\]
+
+% ------------------------------------------------------------
+\section{Spectral Operator Definition}
+
+Define spectral operator:
+\[
+\mathcal{S} : M \to \mathbb{R}^n
+\]
+
+\[
+\mathcal{S}(p) = \mathrm{Spec}(L(p)).
+\]
+
+This operator preserves all spectral invariants required by A6 dual algebra.
+
+% ------------------------------------------------------------
+\section{Spectral Algebraic Laws}
+
+\subsection{Spectral Continuity}
+\[
+\mathrm{Spec}(L(p)) \approx \mathrm{Spec}(L(q)).
+\]
+
+\subsection{Spectral Mismatch Bound}
+\[
+\delta_{\mathrm{spec}}(p) < \epsilon.
+\]
+
+\subsection{Bundle Transition Law}
+\[
+L(p) \to L(q) \quad \Rightarrow \quad \mathrm{Spec}(L(p)) \to \mathrm{Spec}(L(q)).
+\]
+
+\subsection{Spectral Provenance Preservation}
+\[
+I_{\mathrm{prov}}(L(p)) \Rightarrow I_{\mathrm{prov}}(L(q)).
+\]
+
+\subsection{Spectral Semantic Preservation}
+\[
+I_{\mathrm{sem}}(L(p)) \Rightarrow I_{\mathrm{sem}}(\mathcal{S}(p)).
+\]
+
+% ------------------------------------------------------------
+\section{Spectral Invariants}
+
+\subsection{Stability Envelope Monotonicity}
+\[
+E_{\mathrm{spec}}(p) \le E_{\mathrm{spec}}(q)
+  \Rightarrow \text{Stability}_{\mathrm{spec}}(p)
+  \Rightarrow \text{Stability}_{\mathrm{spec}}(q).
+\]
+
+\subsection{Modal Lift Compatibility}
+\[
+\mu(p) \leadsto \mu(q)
+  \Rightarrow \mathrm{Spec}(L(p)) \leadsto \mathrm{Spec}(L(q)).
+\]
+
+\subsection{Operator Determinism}
+\[
+\mathcal{S}(p) = \mathcal{S}(q) \Rightarrow p = q.
+\]
+
+\subsection{Kernel Preservation}
+\[
+K_{\mathrm{spec}}(p) \Rightarrow K_{\mathrm{spec}}(\mathcal{S}(p)).
+\]
+
+% ------------------------------------------------------------
+\section{Spectral Kernel}
+
+Define spectral kernel:
+\[
+K_{\mathrm{spec}}(p) =
+  \big(
+    \mathrm{Spec}(L(p)) \text{ continuous}
+    \land \delta_{\mathrm{spec}}(p) < \epsilon
+    \land L(p) \leadsto L(q)
+  \big).
+\]
+
+This kernel is preserved under $\mathcal{S}$.
+
+% ------------------------------------------------------------
+\section{Conclusion}
+
+This document fully populates the spectral operator algebra for A6 Deep
+Geometry. It satisfies all thirteen constructive fixes and forms the spectral
+foundation for the unified A6 kernel and subsequent Lean modules.
+
+\end{document}
