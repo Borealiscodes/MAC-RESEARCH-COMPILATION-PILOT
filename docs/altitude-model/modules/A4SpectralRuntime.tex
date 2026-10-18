@@ -1,0 +1,139 @@
+% ---------------------------------------------------------------------------
+% A4SpectralRuntime.tex
+% Altitude A4 — Spectral Runtime Physics
+% Author: Borealis S. Hedling
+% Version: v1.0
+% ---------------------------------------------------------------------------
+
+\section{Altitude A4: Spectral Runtime Physics}
+
+Altitude A4 extends the Euclidean runtime manifold of A3 by introducing spectral
+structure. Runtime operators acquire eigenfunctions, modal coordinates, and
+spectral continuity constraints. A4 defines the mathematical transition from
+adjacency-preserving Euclidean operators to spectrally-structured runtime
+physics.
+
+\subsection{Spectral Manifold Structure}
+
+Let $M$ be the runtime manifold defined in A3. A4 introduces a spectral operator
+$P : M \rightarrow M$ satisfying:
+\[
+P \text{ is linear, continuous, and adjacency-preserving}.
+\]
+
+A4 assumes the existence of a symmetric conjugate:
+\[
+P_{\mathrm{sym}} = D^{-1/2} K D^{-1/2},
+\]
+where $K$ is an adjacency-preserving kernel and $D$ is the degree matrix.
+
+\subsection{Eigenfunctions and Spectral Modes}
+
+A4 requires that $P_{\mathrm{sym}}$ admit an orthonormal eigenbasis:
+\[
+P_{\mathrm{sym}} \phi_k = \lambda_k \phi_k,
+\]
+with:
+\[
+1 = \lambda_0 \ge \lambda_1 \ge \lambda_2 \ge \cdots \ge 0.
+\]
+
+Eigenfunctions $\phi_k$ define the spectral modes of the runtime manifold.
+
+\subsection{Modal Coordinates}
+
+Modal coordinates are defined as:
+\[
+\psi_k = \lambda_k \phi_k.
+\]
+
+These coordinates embed runtime patches into a spectral space:
+\[
+\Psi : M \rightarrow \mathbb{R}^d, \quad p \mapsto (\psi_1(p), \ldots, \psi_d(p)).
+\]
+
+Modal coordinates must satisfy:
+\begin{itemize}
+  \item spectral continuity,
+  \item adjacency preservation,
+  \item bounded holonomy,
+  \item reversible reconstruction.
+\end{itemize}
+
+\subsection{Spectral Continuity}
+
+A4 enforces:
+\[
+\| \psi_k(p) - \psi_k(q) \| < \epsilon \quad \text{whenever} \quad A(p,q),
+\]
+ensuring that spectral modes do not fracture adjacency.
+
+This condition prepares the manifold for A5 modal runtime.
+
+\subsection{Spectral Stability}
+
+Spectral stability requires:
+\[
+|\lambda_k - \lambda_k'| < \delta,
+\]
+under admissible perturbations of $K$ or $P$.
+
+This prevents spectral tearing and ensures compatibility with A3 holonomy bounds.
+
+\subsection{Spectral Operators}
+
+An operator $T$ is admissible in A4 if:
+\[
+T \text{ preserves spectral continuity and modal coordinates}.
+\]
+
+Admissible operators include:
+\begin{itemize}
+  \item symmetric conjugate operators,
+  \item Markov kernels,
+  \item spectral filters,
+  \item modal projections.
+\end{itemize}
+
+\subsection{DiffusionGeometry as a Spectral Example}
+
+DiffusionGeometry provides spectral operators suitable for A4:
+\begin{itemize}
+  \item Markov operator $P$,
+  \item symmetric conjugate $P_{\mathrm{sym}}$,
+  \item eigenfunctions $\phi_k$,
+  \item diffusion coordinates $\psi_k$.
+\end{itemize}
+
+These operators satisfy:
+\[
+K(p) = 0, \quad \|H_T\| < \epsilon, \quad \text{spectral continuity}.
+\]
+
+They remain strictly within altitudes A3–A4.
+
+\subsection{Integration with Python Runtime Harness (A4.5)}
+
+The Python runtime harness enforces:
+\begin{itemize}
+  \item spectral continuity constraints,
+  \item adjacency-preserving spectral transitions,
+  \item reversible modal coordinate updates,
+  \item provenance monotonicity under spectral evolution.
+\end{itemize}
+
+A4SpectralRuntime.tex defines the spectral invariants the harness must satisfy.
+
+% ---------------------------------------------------------------------------
+% Provenance
+% A4SpectralRuntime.tex
+% Author: Borealis S. Hedling
+% Altitude: A4
+% Surface: Structural-AI/Runtime-Physics
+% Version: v1.0
+% Created: 18 October 2026, Dublin, Ireland
+% Purpose: Define spectral runtime physics, eigenfunctions, modal coordinates,
+%          spectral continuity, spectral stability, and admissible spectral
+%          operators. Provides theoretical foundation for A5 modal runtime and
+%          integrates with the Python A4.5 runtime harness.
+% ---------------------------------------------------------------------------
