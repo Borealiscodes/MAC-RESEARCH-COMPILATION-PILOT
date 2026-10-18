@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Mathematical Appendix: Altitude Model and Spectral Alignment}
+\author{Borealis S. Hedling}
+\date{Draft Version — 18 October 2026}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Proxy Hilbert Geometry}
+
+\subsection{Definition}
+Let $\mathcal{H}' = \mathbb{R}^n$ equipped with the inner product
+\[
+\langle x, y \rangle' = x^\top y.
+\]
+
+\subsection{Norm}
+The induced norm is
+\[
+\|x\|' = \sqrt{x^\top x}.
+\]
+
+\subsection{Adjoint}
+For any operator $A \in \mathbb{R}^{n \times n}$, the adjoint is defined as
+\[
+A^{\dagger'} = A^\top.
+\]
+
+\subsection{Operator Norm}
+\[
+\|A\|' = \sup_{\|x\|' = 1} \|Ax\|'.
+\]
+
+\section{Density Operators}
+
+\subsection{Definition}
+A proxy density operator is any matrix $\rho' \in \mathbb{R}^{n \times n}$ satisfying:
+\[
+\rho' \ge 0, \qquad \mathrm{Tr}(\rho') = 1.
+\]
+
+\subsection{Positivity Condition}
+For all $x \in \mathbb{R}^n$,
+\[
+x^\top \rho' x \ge 0.
+\]
+
+\subsection{Spectral Decomposition}
+If $\rho'$ is diagonalizable,
+\[
+\rho' = \sum_{i=1}^n \lambda_i v_i v_i^\top,
+\]
+where $\lambda_i \ge 0$ and $\sum_i \lambda_i = 1$.
+
+\section{Conceptual CPTP Evolution}
+
+\subsection{Definition}
+A conceptual CPTP-style map is defined as
+\[
+\mathcal{E}'(\rho') = \sum_{i=1}^m K_i' \rho' K_i'^{\dagger'},
+\]
+where $K_i' \in \mathbb{R}^{n \times n}$.
+
+\subsection{Trace-Preserving Constraint}
+\[
+\sum_{i=1}^m K_i'^{\dagger'} K_i' = I.
+\]
+
+\subsection{Positivity Preservation}
+If $\rho' \ge 0$, then $\mathcal{E}'(\rho') \ge 0$.
+
+\section{Spectral-Governance Bounds}
+
+\subsection{Spectral Drift Operator}
+Let $\Delta'$ denote the spectral drift operator.  
+The spectral-governance constraint is
+\[
+\|\Delta'(\rho')\|' \le \beta.
+\]
+
+\subsection{Eigenvalue Stability}
+If $\rho' = \sum_i \lambda_i v_i v_i^\top$, then
+\[
+|\lambda_i' - \lambda_i| \le \beta.
+\]
+
+\section{Eco-Governance Constraints}
+
+\subsection{FLOP Ceiling}
+Let $C$ denote the EcoGrid FLOP ceiling.  
+For any conceptual CPTP evolution,
+\[
+\mathrm{FLOP}(\mathcal{E}') \le \alpha C, \qquad 1 \le \alpha \le 4.
+\]
+
+\subsection{Operator Complexity Bound}
+For each $K_i'$,
+\[
+\mathrm{FLOP}(K_i') \le C.
+\]
+
+\section{Altitude Transition Invariants}
+
+\subsection{A7.2 to A8}
+Let $T_{7.2 \rightarrow 8}$ denote the transition map.  
+Invariant:
+\[
+\|T_{7.2 \rightarrow 8}(x)\|' = \|x\|' .
+\]
+
+\subsection{A8 to A8C}
+Let $T_{8 \rightarrow 8C}$ denote the complex-bundle transition.  
+Invariant:
+\[
+\mathrm{Im}(T_{8 \rightarrow 8C}(x)) \text{ is bounded}.
+\]
+
+\subsection{A8C to A9}
+Let $T_{8C \rightarrow 9}$ denote the pseudo-Kraus preparation.  
+Invariant:
+\[
+T_{8C \rightarrow 9}(x) \ge 0.
+\]
+
+\subsection{A9 to A10}
+Let $T_{9 \rightarrow 10}$ denote the operator-algebra uplift.  
+Invariant:
+\[
+\mathrm{Tr}(T_{9 \rightarrow 10}(\rho')) = 1.
+\]
+
+\section{Operator-Chain Provenance}
+
+\subsection{Definition}
+An operator-chain provenance record is a sequence
+\[
+\mathcal{P} = (O_1, O_2, \dots, O_k),
+\]
+where each $O_i$ is an operator applied during altitude evolution.
+
+\subsection{Continuity Condition}
+For all $i$,
+\[
+O_{i+1} = f(O_i),
+\]
+for some altitude-governed map $f$.
+
+\section{Conclusion}
+This appendix provides the formal mathematical structures underlying the
+Altitude Model and Conceptual Quantum Operator Runtime (CQOR). Narrative
+sections in the main preprint will reference these definitions and results.
+
+\end{document}
