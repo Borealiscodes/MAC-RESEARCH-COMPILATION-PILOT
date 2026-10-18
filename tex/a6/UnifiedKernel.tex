@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Unified Kernel Geometry}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This document defines the unified kernel for A6 dual-algebra systems. The kernel
+acts as the geometric firewall binding spectral, modal, holonomy, collapse, and
+stability operators into a single invariant-preserving structure. It provides
+the regular-value constraints, tangent-space structure, intersection geometry,
+and provenance lift required for safe operator composition and runtime
+diagnostics.
+
+\section{Kernel Geometry}
+Let $X$ be the base geometric manifold defined in A6GeometryDefinitions. The
+unified kernel $K \subset X$ is defined as the intersection of all operator
+kernels:
+\[
+K = K_{\text{spec}} \cap K_{\text{modal}} \cap K_{\text{holo}} \cap
+    K_{\text{collapse}} \cap K_{\text{stab}}.
+\]
+
+Each kernel is a regular-value submanifold:
+\[
+K_{\text{op}} = f_{\text{op}}^{-1}(0),
+\]
+where $f_{\text{op}}$ is the operator-specific constraint function.
+
+\section{Regular-Value Conditions}
+For each operator constraint $f_{\text{op}}$, the differential
+$Df_{\text{op}}(p)$ is surjective for all $p \in K_{\text{op}}$. This ensures
+that each kernel is a smooth submanifold and that the unified kernel is a
+transversal intersection.
+
+\section{Tangent-Space Structure}
+The tangent space of the unified kernel is given by:
+\[
+T_p K = \bigcap_{\text{op}} \ker Df_{\text{op}}(p).
+\]
+This intersection is non-degenerate due to the regular-value conditions and
+transversality of the operator constraints.
+
+\section{Intersection Geometry}
+The unified kernel inherits geometric structure from each operator kernel. In
+particular:
+\begin{itemize}
+  \item spectral continuity restricts admissible tangent directions,
+  \item modal adjacency restricts allowable transitions,
+  \item holonomy drift restricts curvature accumulation,
+  \item collapse surfaces restrict admissible neighborhoods,
+  \item stability envelopes restrict allowable perturbations.
+\end{itemize}
+
+\section{Dual-Algebra Firewall}
+The unified kernel acts as a firewall preventing operator divergence. For any
+operator $O$ and point $p \in K$:
+\[
+O(p) \in K.
+\]
+This ensures that operator composition preserves kernel membership and prevents
+catastrophic geometry.
+
+\section{Provenance Lift}
+Each operator has a provenance predicate $P_{\text{op}}$. The unified kernel
+provenance is defined as:
+\[
+P_K(p) = \bigwedge_{\text{op}} P_{\text{op}}(p).
+\]
+This ensures that provenance is preserved across operator composition.
+
+\section{Collapse-Surface Interaction}
+Collapse surfaces $\Sigma$ intersect the unified kernel transversally:
+\[
+T_p K + T_p \Sigma = T_p X.
+\]
+This ensures that collapse detection is well-defined and that collapse surfaces
+do not degenerate inside the kernel.
+
+\section{Stability-Envelope Interaction}
+The stability envelope $E$ restricts admissible perturbations:
+\[
+E(p) \leq E(q) \quad \text{for all } p, q \in K.
+\]
+This ensures that kernel perturbations remain bounded.
+
+\section{Operator-Kernel Binding}
+For each operator $O$:
+\[
+O : K \to K.
+\]
+This binding ensures that operator semantics preserve kernel membership and that
+runtime diagnostics can safely monitor operator behavior.
+
+\section*{Conclusion}
+The unified kernel provides the geometric foundation required for safe operator
+composition, invariant preservation, collapse detection, stability envelopes,
+and runtime diagnostics. It completes the A6 physics layer and enables
+construction of the diagnostic and safety layers required for A7 altitude.
+
+\end{document}
