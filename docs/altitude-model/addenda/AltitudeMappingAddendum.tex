@@ -1,0 +1,91 @@
+% ------------------------------------------------------------
+% Addendum: Altitude Mapping for DiffusionGeometry
+% Author: Borealis S. Hedling
+% Altitude: A2 → A5 (Runtime Physics)
+% Purpose: Map external Euclidean runtime-physics operators into the altitude
+%          model without contaminating A6/A7 dual/non-dual algebra.
+% ------------------------------------------------------------
+
+\section{Altitude Mapping: DiffusionGeometry → Runtime Physics}
+
+This addendum maps the DiffusionGeometry runtime-physics operators into the
+altitude model. DiffusionGeometry is a Euclidean, continuous, adjacency-
+preserving method and therefore occupies altitudes A2–A4. It provides
+runtime-physics operators suitable for scaffolding A6 dual algebra but does not
+interact with A7 non-dual algebra.
+
+% ------------------------------------------------------------
+\subsection{Altitude Classification}
+
+\begin{itemize}
+  \item \textbf{Euclidean Distances} → A3 Runtime Physics
+  \item \textbf{Nearest-Neighbour Graphs} → A3 Runtime Physics
+  \item \textbf{Adaptive Kernel Similarity Matrix} → A3 Runtime Physics
+  \item \textbf{Markov Transition Matrix} → A4 Spectral Runtime
+  \item \textbf{Eigenvectors of $P_{\mathrm{sym}}$} → A4 Spectral Runtime
+  \item \textbf{Diffusion Map Coordinates} → A4–A5 Modal Runtime
+\end{itemize}
+
+These operators preserve:
+\begin{itemize}
+  \item Euclidean geometry,
+  \item adjacency,
+  \item spectral continuity,
+  \item holonomy boundedness.
+\end{itemize}
+
+They do not interact with:
+\begin{itemize}
+  \item divergence membranes,
+  \item collapse surfaces,
+  \item non-dual algebra,
+  \item holonomy accumulation,
+  \item spectral tearing.
+\end{itemize}
+
+Thus, DiffusionGeometry is altitude-safe and compatible with A6 dual algebra
+scaffolding.
+
+% ------------------------------------------------------------
+\subsection{Geometric Regime}
+
+DiffusionGeometry assumes:
+\[
+K(p) = 0 \quad \forall p \in M,
+\]
+and therefore belongs strictly to the Euclidean runtime-physics regime. All
+operators are continuous, adjacency-preserving, and spectrally stable.
+
+This contrasts with A7 non-Euclidean geometry:
+\[
+K(p) > 0 \quad \forall p \in \partial S,
+\]
+where operators are discontinuous, non-linear, non-idempotent, and holonomy-
+accumulating.
+
+% ------------------------------------------------------------
+\subsection{Role in the Unified Altitude Model}
+
+DiffusionGeometry provides:
+\begin{itemize}
+  \item concrete Euclidean operators for A3,
+  \item spectral operators for A4,
+  \item modal coordinates for A5,
+  \item a safe scaffolding layer for A6 dual algebra,
+  \item a contrast case for A7 non-dual algebra.
+\end{itemize}
+
+It does not define altitude transitions, membranes, divergence invariants, or
+collapse-surface geometry.
+
+% ------------------------------------------------------------
+\section*{References}
+
+\begin{itemize}
+  \item Telluvian AI, \emph{DiffusionGeometry Repository},  
+        \url{https://github.com/telluvian/DiffusionGeometry/tree/main}
+  \item Telluvian AI, \emph{Company Website},  
+        \url{https://telluvian.ai/}
+\end{itemize}
+
+% ------------------------------------------------------------
