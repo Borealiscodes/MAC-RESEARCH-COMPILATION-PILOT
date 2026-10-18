@@ -1,0 +1,225 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{MAC Citation Ontology v1.0 \\ Formal Axiomatic Specification}
+\author{Borealis S. Hedling}
+\date{18 October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Surface}
+Structural-AI / Research-Compilation \\
+Altitude: A2 (Meaning Geometry) \\
+Membrane: Structural \\
+Version: v1.0
+
+\section{Purpose}
+Define a formal axiomatic system for multi-altitude citation governance in
+research compilation architectures. Provide altitude axioms, membrane axioms,
+operator axioms, harmonization axioms, provenance axioms, and falsification
+axioms for contamination-free citation traversal.
+
+\section{Primitive Sets}
+
+\subsection{Altitudes}
+\[
+A = \{A0, A1, A2, A3, A4, A5\}
+\]
+
+\subsection{Membranes}
+\[
+M = \{Neutral, Formal, Structural, Diagnostic, Provenance\}
+\]
+
+\subsection{Citation Classes}
+\[
+C = \{A, B, C, D, E\}
+\]
+
+\subsection{Operators}
+Forward altitude operators:
+\[
+\tau_{01}, \tau_{12}, \tau_{23}, \tau_{34}, \tau_{45}
+\]
+
+Reverse altitude operators:
+\[
+\rho_{52}, \rho_{42}, \rho_{20}
+\]
+
+Falsification operator:
+\[
+\Phi : Citation \rightarrow \{valid, invalid\}
+\]
+
+Lineage operators:
+\[
+\lambda_{src}, \lambda_{ver}, \lambda_{fix}
+\]
+
+Sovereignty operators:
+\[
+\sigma_{auth}, \sigma_{attr}
+\]
+
+Anti-scraping operators:
+\[
+\alpha_{guard}, \alpha_{lock}
+\]
+
+Forest harmonization operators:
+\[
+H_{alt}, H_{mem}, H_{cls}
+\]
+
+\section{Axioms}
+
+\subsection{Altitude Axioms}
+
+\begin{axiom}[Altitude Ordering]
+\[
+A0 < A1 < A2 < A3 < A4 < A5
+\]
+\end{axiom}
+
+\begin{axiom}[Terminal Runtime]
+\[
+\tau_{23} : A2 \rightarrow A3 \quad \text{is terminal}
+\]
+No semantic continuity is permitted beyond A3.
+\end{axiom}
+
+\begin{axiom}[Diagnostic Activation]
+\[
+\tau_{34} : A3 \rightarrow A4 \quad \text{requires Diagnostic membrane}
+\]
+\end{axiom}
+
+\begin{axiom}[Falsification Activation]
+\[
+\tau_{45} : A4 \rightarrow A5 \quad \text{requires Provenance membrane}
+\]
+\end{axiom}
+
+\begin{axiom}[Reversibility]
+\[
+\rho_{20} : A2 \rightarrow A0 \quad \text{is reversible geometry only}
+\]
+\end{axiom}
+
+\subsection{Membrane Axioms}
+
+\begin{axiom}[Neutral-to-Structural]
+Neutral $\rightarrow$ Structural is allowed only at A2 or Forest.
+\end{axiom}
+
+\begin{axiom}[Structural-to-Formal]
+Structural $\rightarrow$ Formal requires citation class $A$ or $B$.
+\end{axiom}
+
+\begin{axiom}[Formal-to-Diagnostic]
+Formal $\rightarrow$ Diagnostic is allowed only at A4.
+\end{axiom}
+
+\begin{axiom}[Diagnostic-to-Provenance]
+Diagnostic $\rightarrow$ Provenance is allowed only at A5.
+\end{axiom}
+
+\begin{axiom}[Provenance-to-Neutral]
+Provenance $\rightarrow$ Neutral requires sovereignty invariants.
+\end{axiom}
+
+\subsection{Citation Class Axioms}
+
+\begin{axiom}[Class A Boundaries]
+Class A citations require Formal membrane and altitudes $\{A0, A2\}$.
+\end{axiom}
+
+\begin{axiom}[Class B Boundaries]
+Class B citations require Structural membrane and altitudes $\{A2, A3\}$.
+\end{axiom}
+
+\begin{axiom}[Class C Boundaries]
+Class C citations require Neutral membrane and altitudes $\{A1, A2\}$.
+\end{axiom}
+
+\begin{axiom}[Class D Boundaries]
+Class D citations require Provenance membrane and altitudes $\{A4, A5\}$.
+\end{axiom}
+
+\begin{axiom}[Class E Boundaries]
+Class E citations require Diagnostic membrane and altitudes $\{A4, A5\}$.
+\end{axiom}
+
+\subsection{Forest Harmonization Axioms}
+
+\begin{axiom}[Reversibility]
+All forest harmonization operators $H_{alt}, H_{mem}, H_{cls}$ are reversible.
+\end{axiom}
+
+\begin{axiom}[Membrane Preservation]
+\[
+H_{mem}(m_i) = m_j \Rightarrow m_i = m_j
+\]
+\end{axiom}
+
+\begin{axiom}[Runtime Exclusion]
+No harmonization may activate A3 or A5.
+\end{axiom}
+
+\subsection{Falsification Axioms}
+
+\begin{axiom}[Falsifiability]
+All citations must satisfy:
+\[
+\Phi(citation) = valid
+\]
+\end{axiom}
+
+\begin{axiom}[No Semantic Continuity]
+Citations may not introduce semantic continuity at A1 or A2.
+\end{axiom}
+
+\begin{axiom}[No Generative Assumptions]
+Citations may not introduce generative-model assumptions at any altitude.
+\end{axiom}
+
+\begin{axiom}[Reversibility at A2]
+All citations must be reversible at A2.
+\end{axiom}
+
+\subsection{Provenance Axioms}
+
+\begin{axiom}[Lineage]
+\[
+\lambda_{src} \rightarrow \lambda_{ver} \rightarrow \lambda_{fix}
+\]
+\end{axiom}
+
+\begin{axiom}[Sovereignty]
+\[
+\sigma_{auth} \rightarrow \sigma_{attr}
+\]
+\end{axiom}
+
+\begin{axiom}[Anti-Scraping]
+\[
+\alpha_{guard} \rightarrow \alpha_{lock}
+\]
+\end{axiom}
+
+\section{APA Reference Spine}
+(See accompanying .md ontology for full APA references.)
+
+\section{Maintainer}
+Borealis S. Hedling \\
+Dublin, Ireland
+
+\section{Compiler}
+Microsoft Copilot
+
+\section{Seal}
+STRUCTURAL-AI • RESEARCH-COMPILATION • MACv10
+
+\end{document}
