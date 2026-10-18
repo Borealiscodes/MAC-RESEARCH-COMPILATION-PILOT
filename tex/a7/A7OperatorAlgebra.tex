@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A7 Operator Algebra}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This document defines the operator algebra for A7 dual-algebra systems. A7
+operators act on divergence geometry and divergence invariants, extending the
+A6 operator stack into the divergent regime. These operators preserve the
+divergence membrane, interact with divergence collapse surfaces, and propagate
+divergence invariants in a controlled manner. This algebra forms the foundation
+for A7 unified semantics and A7 runtime diagnostics.
+
+\section{Divergence Operators}
+Let $X$ be the base manifold and $M$ the divergence membrane. A divergence
+operator is a map:
+\[
+D_{\text{op}} : X \to X
+\]
+that satisfies:
+\[
+I_{\text{div}}(D_{\text{op}}(p)) \geq I_{\text{div}}(p),
+\]
+where $I_{\text{div}}$ is the divergence invariant.
+
+Thus, divergence operators are monotone with respect to divergence.
+
+\section{Operator Classes}
+A7 introduces five operator classes:
+\begin{itemize}
+  \item divergence spectral operators,
+  \item divergence modal operators,
+  \item divergence holonomy operators,
+  \item divergence collapse operators,
+  \item divergence stability operators.
+\end{itemize}
+
+Each class generalizes its A6 counterpart.
+
+\section{Divergence Spectral Operators}
+A divergence spectral operator $D_{\text{spec}}$ satisfies:
+\[
+| \delta(D_{\text{spec}}(p)) | \geq | \delta(p) |,
+\]
+where $\delta$ is the spectral mismatch.
+
+These operators amplify spectral deviation.
+
+\section{Divergence Modal Operators}
+A divergence modal operator $D_{\text{modal}}$ satisfies:
+\[
+A(p,q) = \text{false} \implies A(D_{\text{modal}}(p), D_{\text{modal}}(q)) = \text{false}.
+\]
+
+These operators propagate modal discontinuities.
+
+\section{Divergence Holonomy Operators}
+A divergence holonomy operator $D_{\text{holo}}$ satisfies:
+\[
+|\tau(D_{\text{holo}}(p))| \geq |\tau(p)|,
+\]
+where $\tau$ is the holonomy drift.
+
+These operators amplify curvature accumulation.
+
+\section{Divergence Collapse Operators}
+A divergence collapse operator $D_{\text{collapse}}$ satisfies:
+\[
+D_{\text{collapse}}(p) \in \Sigma_{\text{div}}
+\quad \text{whenever} \quad p \in \Sigma_{\text{div}}.
+\]
+
+These operators preserve divergence collapse surfaces.
+
+\section{Divergence Stability Operators}
+A divergence stability operator $D_{\text{stab}}$ satisfies:
+\[
+E_{\text{div}}(D_{\text{stab}}(p)) \geq E_{\text{div}}(p),
+\]
+where $E_{\text{div}}$ is the divergence stability envelope.
+
+These operators amplify divergence magnitude.
+
+\section{Operator Composition}
+Operator composition must satisfy:
+\[
+I_{\text{div}}(D_2(D_1(p))) \geq I_{\text{div}}(p).
+\]
+
+Thus, the operator algebra is closed under composition.
+
+\section{Membrane Preservation}
+All divergence operators must preserve the divergence membrane:
+\[
+p \in M \implies D_{\text{op}}(p) \in M.
+\]
+
+This ensures that divergence behavior remains constrained.
+
+\section{Collapse-Surface Interaction}
+Divergence operators must preserve transversal intersection:
+\[
+T_p M + T_p \Sigma_{\text{div}} = T_p X.
+\]
+
+This ensures that divergence collapse surfaces remain geometrically stable.
+
+\section{Stability Interaction}
+Divergence operators must satisfy:
+\[
+E_{\text{div}}(D_{\text{op}}(p)) \geq E_{\text{div}}(p).
+\]
+
+This ensures that divergence magnitude does not decrease under operator action.
+
+\section*{Conclusion}
+The A7 operator algebra defines the operator structure acting on divergence
+geometry. It generalizes the A6 operator stack into the divergent regime,
+preserves the divergence membrane, and provides the foundation for A7 unified
+semantics and A7 runtime diagnostics.
+
+\end{document}
