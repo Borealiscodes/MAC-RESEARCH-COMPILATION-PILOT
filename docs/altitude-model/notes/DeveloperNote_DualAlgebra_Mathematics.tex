@@ -1,0 +1,143 @@
+# Developer Note — Dual Algebra Runtime (A6)
+# Mathematical Foundations and Structural Rationale
+
+This note explains the mathematical transition that occurs at altitude A6,
+where geometry ceases to be the substrate of runtime physics and instead becomes
+an emergent property of operator algebra. A6 is the first altitude where the
+runtime manifold is defined not by curvature, adjacency, or spectral continuity,
+but by algebraic relations between operators.
+
+---------------------------------------------------------------------------
+1. Why A6 Is a Structural Turning Point
+---------------------------------------------------------------------------
+
+A0–A5 define runtime physics in geometric terms:
+- A0–A2: structural and formal altitude geometry
+- A3: Euclidean runtime geometry
+- A4: spectral geometry
+- A5: modal geometry
+
+At A6, this hierarchy inverts:
+
+    Geometry → Runtime → Algebra → Geometry
+
+The runtime manifold is no longer geometric. It is algebraic. Geometry becomes
+an emergent phenomenon derived from operator relations.
+
+---------------------------------------------------------------------------
+2. Algebraic Definition of Curvature
+---------------------------------------------------------------------------
+
+In A6, curvature is defined by operator commutators:
+
+    K_A6(p) = [T_i, T_j]
+
+This replaces geometric curvature K(p) from A3 and spectral curvature from A4.
+
+Consequences:
+- curvature is discontinuous,
+- curvature is operator-dependent,
+- curvature can accumulate holonomy,
+- curvature can fracture adjacency.
+
+---------------------------------------------------------------------------
+3. Algebraic Adjacency
+---------------------------------------------------------------------------
+
+Adjacency is no longer a geometric relation A(p,q). It becomes an algebraic
+compatibility condition:
+
+    A(p,q) ⇔ T(p) = T(q)
+
+This means:
+- adjacency is defined by operator action,
+- adjacency can fracture under operator mismatch,
+- adjacency is no longer symmetric or metric-derived.
+
+---------------------------------------------------------------------------
+4. Algebraic Holonomy
+---------------------------------------------------------------------------
+
+Holonomy becomes an algebraic loop:
+
+    H_T = T^{-1} S T S^{-1}
+
+This replaces the bounded holonomy of A3 and the spectral holonomy of A4.
+
+Consequences:
+- holonomy can accumulate,
+- holonomy can diverge,
+- holonomy becomes a diagnostic of algebraic inconsistency.
+
+---------------------------------------------------------------------------
+5. Algebraic Continuity
+---------------------------------------------------------------------------
+
+Continuity is no longer topological. It is spectral:
+
+    || T φ_k - S φ_k || < ε
+
+This ensures:
+- modal coordinates remain stable,
+- spectral modes do not tear,
+- operator algebra does not destroy modal structure.
+
+---------------------------------------------------------------------------
+6. Runtime Patches Become Algebraic Subspaces
+---------------------------------------------------------------------------
+
+A runtime patch in A6 is:
+
+    P_A6 = Span{T_i}
+
+This means:
+- patches are operator-generated,
+- geometry is emergent,
+- membranes constrain algebraic closure, not geometric continuity.
+
+---------------------------------------------------------------------------
+7. Provenance Becomes Algebraic Lineage
+---------------------------------------------------------------------------
+
+Provenance is no longer a log of events. It is a chain of operator compositions:
+
+    Π = T_1 ∘ T_2 ∘ ... ∘ T_n
+
+This ensures:
+- provenance is algebraically monotone,
+- provenance is membrane-constrained,
+- provenance is reversible only under dual operators.
+
+---------------------------------------------------------------------------
+8. Why DiffusionGeometry Cannot Enter A6
+---------------------------------------------------------------------------
+
+DiffusionGeometry is:
+- Euclidean,
+- continuous,
+- adjacency-preserving,
+- spectrally stable,
+- holonomy-bounded.
+
+A6 is:
+- non-Euclidean,
+- discontinuous,
+- adjacency-fracturing,
+- spectral-tearing,
+- holonomy-accumulating.
+
+DiffusionGeometry is structurally incompatible with A6 and must remain confined
+to A3–A5.
+
+---------------------------------------------------------------------------
+9. Next Steps
+---------------------------------------------------------------------------
+
+- Generate A6DualAlgebra.tex (full module)
+- Define dual operators, dual invariants, dual membranes
+- Formalize algebraic curvature, adjacency, holonomy, continuity
+- Prepare A7NonDualAlgebra.tex
+- Begin Lean formalization of dual algebra
+
+This Developer Note ensures mathematical clarity as MAC transitions from modal
+runtime physics to dual algebra runtime.
