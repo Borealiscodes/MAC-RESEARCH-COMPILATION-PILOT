@@ -1,0 +1,144 @@
+% ---------------------------------------------------------------------------
+% A5ModalRuntime.tex
+% Altitude A5 — Modal Runtime Physics
+% Author: Borealis S. Hedling
+% Version: v1.0
+% ---------------------------------------------------------------------------
+
+\section{Altitude A5: Modal Runtime Physics}
+
+Altitude A5 introduces modal dynamics on top of the spectral runtime manifold
+defined in A4. Modal runtime physics treats spectral modes as operational
+entities, enabling runtime patches to evolve according to modal coordinates,
+modal operators, and modal invariants.
+
+A5 is the final altitude before dual algebra (A6) and non-dual algebra (A7).
+
+\subsection{Modal Manifold}
+
+Let $M$ be the spectral runtime manifold from A4. A5 defines the modal manifold:
+\[
+\mathcal{M}_{\mathrm{modal}} = (M, \Psi, \mathcal{T}_{\mathrm{modal}}),
+\]
+where:
+\begin{itemize}
+  \item $\Psi$ is the modal coordinate embedding,
+  \item $\mathcal{T}_{\mathrm{modal}}$ is the admissible modal operator set.
+\end{itemize}
+
+Modal coordinates $\psi_k$ from A4 become active runtime variables.
+
+\subsection{Modal Operators}
+
+A modal operator $T_{\mathrm{modal}}$ acts on modal coordinates:
+\[
+T_{\mathrm{modal}} : \Psi(p) \mapsto \Psi'(p).
+\]
+
+A5 requires:
+\[
+\Psi'(p) = f(\psi_1(p), \ldots, \psi_d(p)),
+\]
+where $f$ is:
+\begin{itemize}
+  \item continuous,
+  \item adjacency-preserving,
+  \item spectrally stable,
+  \item reversible.
+\end{itemize}
+
+\subsection{Modal Dynamics}
+
+Modal dynamics define how runtime patches evolve:
+\[
+\frac{d\psi_k}{dt} = F_k(\psi_1, \ldots, \psi_d),
+\]
+where $F_k$ must satisfy:
+\begin{itemize}
+  \item spectral continuity,
+  \item modal stability,
+  \item bounded holonomy,
+  \item membrane consistency.
+\end{itemize}
+
+Modal dynamics must not fracture adjacency or violate spectral invariants.
+
+\subsection{Modal Stability}
+
+A5 enforces:
+\[
+\left| \frac{d\psi_k}{dt} \right| < \epsilon,
+\]
+ensuring modal evolution remains compatible with A4 spectral continuity.
+
+Modal stability prevents:
+\begin{itemize}
+  \item spectral tearing,
+  \item modal divergence,
+  \item adjacency fracture.
+\end{itemize}
+
+\subsection{Modal Reconstruction}
+
+A5 requires reversible reconstruction:
+\[
+p = \Psi^{-1}(\Psi(p)).
+\]
+
+This ensures modal evolution does not lose geometric information.
+
+\subsection{Admissible Modal Operators}
+
+Admissible operators include:
+\begin{itemize}
+  \item modal filters,
+  \item modal projections,
+  \item modal integrators,
+  \item modal evolution operators.
+\end{itemize}
+
+These operators must preserve:
+\begin{itemize}
+  \item adjacency,
+  \item spectral continuity,
+  \item modal stability,
+  \item provenance monotonicity.
+\end{itemize}
+
+\subsection{DiffusionGeometry as a Modal Example}
+
+DiffusionGeometry provides modal examples:
+\begin{itemize}
+  \item diffusion coordinates $\psi_k$,
+  \item spectral decay modes,
+  \item modal embeddings,
+  \item modal evolution under diffusion time $t$.
+\end{itemize}
+
+These examples remain strictly within altitudes A3–A5.
+
+\subsection{Integration with Python Runtime Harness (A4.5)}
+
+The Python runtime harness enforces:
+\begin{itemize}
+  \item modal coordinate updates,
+  \item reversible modal transitions,
+  \item adjacency-preserving modal evolution,
+  \item provenance monotonicity under modal dynamics.
+\end{itemize}
+
+A5ModalRuntime.tex defines the modal invariants the harness must satisfy.
+
+% ---------------------------------------------------------------------------
+% Provenance
+% A5ModalRuntime.tex
+% Author: Borealis S. Hedling
+% Altitude: A5
+% Surface: Structural-AI/Runtime-Physics
+% Version: v1.0
+% Created: 18 October 2026, Dublin, Ireland
+% Purpose: Define modal runtime physics, modal operators, modal dynamics,
+%          modal stability, reversible modal reconstruction, and admissible
+%          modal evolution. Provides theoretical foundation for A6 dual algebra
+%          and integrates with the Python A4.5 runtime harness.
+% ---------------------------------------------------------------------------
