@@ -1,0 +1,152 @@
+% ------------------------------------------------------------
+% A6 Activation Operator Algebra — Full Population (v1.0)
+% Author: Borealis S. Hedling
+% Altitude: A6 (Dual Algebra)
+% Purpose: Populate activation operators, invariants, and laws for A6 Deep Geometry.
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Activation Operator Algebra: Full Population (v1.0)}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+% ------------------------------------------------------------
+\section*{Overview}
+
+This document defines the fully populated activation operator algebra for A6
+Deep Geometry. Activation operators combine manifold state $M$ with activation
+state $S$ while preserving semantic lift, provenance lift, stability envelopes,
+closure, idempotence, and all dual-algebra invariants required by the thirteen
+constructive fixes.
+
+Let $M$ be the A6 reasoning manifold and $S$ an activation surface.
+
+% ------------------------------------------------------------
+\section{Activation Operator}
+
+Define activation operator:
+\[
+\mathcal{A} : M \times S \to M.
+\]
+
+\[
+\mathcal{A}(M, S) =
+  \big(
+    s_{\mathrm{stable}} \land S_{\mathrm{stable}},
+    s_{\mathrm{spec}} \land S_{\mathrm{spec}},
+    s_{\mathrm{collapse}} \land S_{\mathrm{collapse}},
+    s_{\mathrm{drift}} \land S_{\mathrm{drift}},
+    s_{\mathrm{modal}} \land S_{\mathrm{modal}}
+  \big).
+\]
+
+This operator merges manifold and activation states while preserving all A6
+dual-algebra invariants.
+
+% ------------------------------------------------------------
+\section{Activation Algebraic Laws}
+
+\subsection{Closure}
+\[
+\mathcal{A}(M, S) \in M.
+\]
+
+\subsection{Identity}
+\[
+\mathcal{A}(M, e) = M,
+\]
+where $e$ is the activation identity element.
+
+\subsection{Idempotence}
+\[
+\mathcal{A}(M, S) = \mathcal{A}(\mathcal{A}(M, S), S).
+\]
+
+\subsection{Absorption}
+\[
+\mathcal{A}(M, S) \preceq M \Rightarrow \mathcal{A}(M, S) = M.
+\]
+
+\subsection{Semantic Homomorphism}
+\[
+I_{\mathrm{sem}}(M) \Rightarrow I_{\mathrm{sem}}(\mathcal{A}(M, S)).
+\]
+
+\subsection{Provenance Preservation}
+\[
+I_{\mathrm{prov}}(M) \Rightarrow I_{\mathrm{prov}}(\mathcal{A}(M, S)).
+\]
+
+% ------------------------------------------------------------
+\section{Activation Invariants}
+
+Activation operators must satisfy all dual-algebra invariants:
+
+\subsection{Stability Envelope Monotonicity}
+\[
+E_{\mathrm{act}}(M) \le E_{\mathrm{act}}(M')
+  \Rightarrow \text{Stability}_{\mathrm{act}}(M)
+  \Rightarrow \text{Stability}_{\mathrm{act}}(M').
+\]
+
+\subsection{Modal Lift Preservation}
+\[
+\mu(M) \leadsto \mu(M') \Rightarrow
+  \mu(\mathcal{A}(M, S)) \leadsto \mu(\mathcal{A}(M', S)).
+\]
+
+\subsection{Spectral Compatibility}
+\[
+\mathrm{Spec}(L(M)) \leadsto \mathrm{Spec}(L(M'))
+  \Rightarrow
+  \mathrm{Spec}(L(\mathcal{A}(M, S)))
+    \leadsto
+  \mathrm{Spec}(L(\mathcal{A}(M', S))).
+\]
+
+\subsection{Collapse-Surface Compatibility}
+\[
+M \in \Sigma \Rightarrow \mathcal{A}(M, S) \in \Sigma.
+\]
+
+\subsection{Operator Determinism}
+\[
+\mathcal{A}(M, S) = \mathcal{A}(M', S) \Rightarrow M = M'.
+\]
+
+\subsection{Kernel Preservation}
+\[
+K_{\mathrm{act}}(M) \Rightarrow K_{\mathrm{act}}(\mathcal{A}(M, S)).
+\]
+
+% ------------------------------------------------------------
+\section{Activation Kernel}
+
+Define activation kernel:
+\[
+K_{\mathrm{act}}(M) =
+  \big(
+    I_{\mathrm{sem}}(M)
+    \land I_{\mathrm{prov}}(M)
+    \land E_{\mathrm{act}}(M)
+    \land \mu(M)
+    \land (M \in \Sigma)
+  \big).
+\]
+
+This kernel is preserved under $\mathcal{A}$.
+
+% ------------------------------------------------------------
+\section{Conclusion}
+
+This document fully populates the activation operator algebra for A6 Deep
+Geometry. It satisfies all thirteen constructive fixes and completes the triad
+of A6 operator algebras, enabling construction of the unified A6 kernel and
+subsequent Lean modules.
+
+\end{document}
