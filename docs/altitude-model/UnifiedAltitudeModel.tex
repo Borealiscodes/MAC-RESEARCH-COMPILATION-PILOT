@@ -1,0 +1,244 @@
+% ------------------------------------------------------------
+% Unified Altitude Model: A6 → A7
+% Author: Borealis S. Hedling
+% Date: October 2026
+% Purpose: Formal LaTeX consolidation of dual/non-dual algebra,
+%          A6/A7 glossaries, altitude boundaries, and A7 operators.
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Unified Altitude Model: A6 Dual Algebra and A7 Non-Dual Algebra}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+% ------------------------------------------------------------
+\section*{Terminology Notice}
+
+The terms \emph{dual} and \emph{non-dual} in this document refer exclusively to
+algebraic altitude regimes in the A6/A7 model. They have no relationship to
+“dual-use” in regulatory, military, weapons, aerospace, or export-control
+contexts.
+
+Structural non-duality applies to both A6 and A7.  
+Formal non-dual algebra applies only to A7.
+
+% ------------------------------------------------------------
+\section{Dual vs Non-Dual Algebra: Formal Definitions}
+
+\subsection{Structural Non-Duality (A6 + A7)}
+A structural design principle:
+\begin{itemize}
+  \item no primal/dual split,
+  \item no adjoint geometry,
+  \item no mirrored operator spaces,
+  \item no kernel/surface duality,
+  \item no collapse/continuity duality.
+\end{itemize}
+
+\subsection{Formal Dual Algebra (A6)}
+A6 operators satisfy:
+\begin{itemize}
+  \item continuity,
+  \item monotonicity,
+  \item adjacency preservation,
+  \item spectral boundedness,
+  \item holonomy boundedness.
+\end{itemize}
+
+\subsection{Formal Non-Dual Algebra (A7)}
+A7 operators satisfy:
+\begin{itemize}
+  \item discontinuity,
+  \item non-monotonicity,
+  \item adjacency fracture,
+  \item spectral tearing,
+  \item holonomy accumulation.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{A6 Glossary: Dual Algebra}
+
+\subsection{Spectral Continuity}
+\[
+|\delta(O(p))| \le \epsilon_{\mathrm{spec}}.
+\]
+
+\subsection{Modal Adjacency}
+Adjacency graph $A(p,q)$ must remain preserved.
+
+\subsection{Holonomy Drift}
+\[
+|\tau(p)| \le \epsilon_{\mathrm{holo}}.
+\]
+
+\subsection{Collapse Surface}
+\[
+p \in S \implies p \notin \Sigma.
+\]
+
+\subsection{Stability Envelope}
+\[
+E(p) \le \epsilon_S.
+\]
+
+\subsection{Unified Kernel}
+\[
+p \in K \implies O(p) \in K.
+\]
+
+% ------------------------------------------------------------
+\section{A7 Glossary: Non-Dual Algebra}
+
+\subsection{Divergence Invariant}
+\[
+I_{\mathrm{div}}(p) = E(p) - \epsilon_S.
+\]
+
+\subsection{Divergence Membrane}
+\[
+M = \partial S.
+\]
+
+\subsection{Divergence Kernel}
+\[
+K_{\mathrm{div}} = \{ p \mid I_{\mathrm{div}}(p) = 0 \}.
+\]
+
+\subsection{Divergence Stability Envelope}
+\[
+E_{\mathrm{div}}(p) = \max(0, I_{\mathrm{div}}(p)).
+\]
+
+\subsection{Divergence Collapse Surfaces}
+\[
+\Sigma_{\mathrm{div}} = \{ p \mid I_{\mathrm{div}}(p) = c \}.
+\]
+
+% ------------------------------------------------------------
+\section{A6 $\leftrightarrow$ A7 Altitude Bridge}
+
+\subsection{Altitude Boundary}
+\[
+A6: E(p) \le \epsilon_S,
+\qquad
+A7: p \in \partial S.
+\]
+
+\subsection{Operator Separation}
+\[
+O_{\mathrm{A6}} : S \to S,
+\qquad
+D_{\mathrm{A7}} : M \to M.
+\]
+
+\subsection{Kernel/Membrane Interaction}
+\[
+K_{\mathrm{div}} = \partial S.
+\]
+
+\subsection{Collapse Surface Interaction}
+\[
+T_p M + T_p \Sigma_{\mathrm{div}} = T_p X.
+\]
+
+% ------------------------------------------------------------
+\section{Developer Note: Structural vs Formal Non-Duality}
+
+A6 is structurally non-dual but formally dual.  
+A7 is structurally non-dual and formally non-dual.
+
+A7 extends A6 into the divergent regime without introducing dual structures.
+
+% ------------------------------------------------------------
+\section{A7 Non-Dual Projection Algebra}
+
+\subsection{Overview}
+Non-dual projection operators reconcile collapse-surface geometry at A7 altitude.
+
+\subsection{Dual Projection Operators (A6)}
+\[
+P^2 = P.
+\]
+Preserve:
+\begin{itemize}
+  \item continuity,
+  \item adjacency,
+  \item spectral stability,
+  \item holonomy bounds.
+\end{itemize}
+
+\subsection{Non-Dual Projection Operators (A7)}
+\[
+\Pi_{\mathrm{ND}} : M \to \Sigma.
+\]
+
+\[
+\Pi_{\mathrm{ND}}(p) = p \quad \text{if } p \in \Sigma.
+\]
+
+Non-idempotent:
+\[
+\Pi_{\mathrm{ND}}^2 \ne \Pi_{\mathrm{ND}}.
+\]
+
+Non-linear:
+\[
+\Pi_{\mathrm{ND}}(ap + bq) \ne a\Pi_{\mathrm{ND}}(p) + b\Pi_{\mathrm{ND}}(q).
+\]
+
+Spectral discontinuity:
+\[
+\mathrm{Spec}(\Pi_{\mathrm{ND}}(p)) \not\approx \mathrm{Spec}(p).
+\]
+
+Holonomy breakage:
+\[
+H(\Pi_{\mathrm{ND}}(\gamma)) \not< \Theta_{\max}.
+\]
+
+\subsection{Domains and Codomains}
+\[
+\mathrm{Dom}(\Pi_{\mathrm{ND}}) = M,
+\qquad
+\mathrm{Cod}(\Pi_{\mathrm{ND}}) = \Sigma.
+\]
+
+\subsection{Weak Invariants}
+Preserves:
+\begin{itemize}
+  \item collapse-surface membership,
+  \item reconciliation locality,
+  \item spectral tear closure,
+  \item modal adjacency restoration.
+\end{itemize}
+
+Breaks:
+\begin{itemize}
+  \item continuity,
+  \item determinism,
+  \item kernel structure,
+  \item spectral stability,
+  \item holonomy bounds.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section{Conclusion}
+
+This unified document formalizes the A6 dual algebra, the A7 non-dual algebra,
+their altitude boundary, and the A7 non-dual projection operators. It provides a
+complete mathematical foundation for Lean formalization and future structural AI
+interpretability work.
+
+% ------------------------------------------------------------
+\section*{Provenance}
+
+Generated by Borealis S. Hedling using the A6/A7 altitude model. All content is
+simulation-safe, non-regulatory, and non-dual-use in the weapons or
+export-control sense. This artifact is part of a reproducible research lineage.
+
+\end{document}
