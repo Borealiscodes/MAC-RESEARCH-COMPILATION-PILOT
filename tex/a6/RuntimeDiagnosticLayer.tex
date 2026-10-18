@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Runtime Diagnostic Layer}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This document defines the runtime diagnostic layer for A6 dual-algebra systems.
+Diagnostics provide real-time monitoring of spectral continuity, modal
+adjacency, holonomy drift, collapse-surface proximity, stability-envelope
+behavior, and kernel firewall integrity. This layer ensures that operator
+execution remains geometrically safe and prevents catastrophic divergence.
+
+\section{Diagnostic Operators}
+Let $X$ be the base manifold and $K$ the unified kernel. A diagnostic operator
+is a map:
+\[
+D : X \to \mathbb{R}
+\]
+that measures deviation from an invariant or operator constraint.
+
+\subsection{Spectral Mismatch Diagnostic}
+Given spectral mismatch $\delta(p)$:
+\[
+D_{\text{spec}}(p) = |\delta(p)|.
+\]
+A spectral warning is triggered when:
+\[
+D_{\text{spec}}(p) > \epsilon_{\text{spec}}.
+\]
+
+\subsection{Modal Discontinuity Diagnostic}
+Modal adjacency $A(p,q)$ defines:
+\[
+D_{\text{modal}}(p,q) = 
+\begin{cases}
+0 & A(p,q) = \text{true}, \\
+1 & A(p,q) = \text{false}.
+\end{cases}
+\]
+
+\subsection{Holonomy Drift Diagnostic}
+Holonomy tensor $\tau(p)$ defines:
+\[
+D_{\text{holo}}(p) = |\tau(p)|.
+\]
+A drift warning is triggered when:
+\[
+D_{\text{holo}}(p) > \epsilon_{\text{holo}}.
+\]
+
+\subsection{Collapse Proximity Diagnostic}
+Given collapse surface $\Sigma$:
+\[
+D_{\text{collapse}}(p) =
+\begin{cases}
+0 & p \notin \Sigma, \\
+1 & p \in \Sigma.
+\end{cases}
+\]
+
+\subsection{Stability Envelope Diagnostic}
+Given stability envelope $E(p)$:
+\[
+D_{\text{stab}}(p,q) = |E(p) - E(q)|.
+\]
+A stability warning is triggered when:
+\[
+D_{\text{stab}}(p,q) > \epsilon_{\text{stab}}.
+\]
+
+\section{Diagnostic Invariants}
+Diagnostics must preserve kernel membership:
+\[
+p \in K \implies D(p) \text{ is well-defined}.
+\]
+
+Diagnostics must be bounded:
+\[
+D(p) < \infty.
+\]
+
+Diagnostics must be continuous:
+\[
+|D(p) - D(q)| < \epsilon \quad \text{for } p \sim q.
+\]
+
+\section{Diagnostic Provenance}
+Each diagnostic operator has a provenance predicate:
+\[
+P_D(p) = \text{``diagnostic is valid at } p\text{''}.
+\]
+Provenance must be preserved under operator composition:
+\[
+P_D(p) \implies P_D(O(p)).
+\]
+
+\section{Diagnostic Runtime Semantics}
+Diagnostics run in parallel with operator execution. For operator $O$:
+\[
+\text{RuntimeState}(p) =
+\big( O(p), D_{\text{spec}}(p), D_{\text{modal}}(p),
+      D_{\text{holo}}(p), D_{\text{collapse}}(p),
+      D_{\text{stab}}(p) \big).
+\]
+
+Warnings are raised when any diagnostic exceeds its threshold.
+
+\section{Kernel Firewall Integration}
+Diagnostics must detect kernel breaches:
+\[
+p \notin K \implies D_{\text{kernel}}(p) = 1.
+\]
+This ensures that operator execution cannot silently leave the kernel.
+
+\section*{Conclusion}
+The runtime diagnostic layer provides real-time monitoring of all operator
+invariants and kernel constraints. It ensures that operator execution remains
+geometrically safe and prevents catastrophic divergence. This layer completes
+Phase 2 of the A6.5 altitude and prepares the system for the safety envelope and
+meta-analysis layers.
+
+\end{document}
