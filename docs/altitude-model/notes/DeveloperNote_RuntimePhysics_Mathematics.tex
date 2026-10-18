@@ -1,0 +1,178 @@
+📄 Developer Note — Mathematical Foundations of Runtime Physics (A3 → A4.5)
+
+Robust, altitude‑correct, mathematically explicit
+
+`
+
+Developer Note — Mathematical Foundations of Runtime Physics (A3 → A4.5)
+
+This note explains the mathematical role of the runtime-physics layer in MACv1.0,
+its relationship to the altitude model, and the rationale for introducing the
+Python A4.5 runtime harness. It also clarifies how Euclidean operator families
+(such as DiffusionGeometry) fit into altitudes A3–A4 without contaminating A6/A7.
+
+---------------------------------------------------------------------------
+1. Mathematical Position of Runtime Physics in the Altitude Model
+---------------------------------------------------------------------------
+
+Runtime physics occupies altitudes A3–A4.5. These altitudes describe the
+operational geometry of MAC: how states evolve, how membranes constrain
+transitions, and how provenance is accumulated.
+
+A3 defines the Euclidean runtime manifold:
+- curvature K(p) = 0,
+- adjacency is preserved under operators,
+- holonomy is bounded,
+- operators are continuous and reversible.
+
+A4 defines the spectral runtime manifold:
+- operators induce Markov kernels,
+- spectral decompositions exist,
+- eigenfunctions define modal coordinates,
+- runtime patches acquire spectral structure.
+
+A4.5 is the implementation altitude:
+- runtime physics becomes executable,
+- determinism and adjacency constraints are enforced,
+- membrane transitions are validated,
+- provenance is tracked as a mathematical invariant.
+
+The Python runtime harness is the first artifact at A4.5.
+
+---------------------------------------------------------------------------
+2. Mathematical Role of Membranes and Determinism
+---------------------------------------------------------------------------
+
+Membranes define constraint surfaces on the runtime manifold. Each membrane
+is a submanifold with its own admissible operator set. For example:
+
+- STRUCTURAL membrane: operators preserve adjacency and Euclidean geometry.
+- FORMAL membrane: operators preserve type-level invariants.
+- DIAGNOSTIC membrane: operators expose internal state without altering geometry.
+- PROVENANCE membrane: operators record lineage and must be idempotent.
+
+Determinism is defined as:
+
+Given an altitude A and membrane M, the transition function
+    T : (A, M) → (A', M')
+must satisfy:
+1. adjacency(A) contains A',
+2. adjacency(M) contains M',
+3. provenance is monotone,
+4. membrane invariants are preserved.
+
+The Python harness enforces these conditions algorithmically.
+
+---------------------------------------------------------------------------
+3. Mathematical Interpretation of DiffusionGeometry in A3–A4
+---------------------------------------------------------------------------
+
+DiffusionGeometry is a Euclidean operator family defined by:
+
+1. k-nearest-neighbour graph G,
+2. adaptive kernel K(x,y) = exp(-||x-y||² / (ρ(x)ρ(y))),
+3. Markov operator P,
+4. symmetric conjugate P_sym = D^{-1/2} K D^{-1/2},
+5. eigenfunctions φ_k,
+6. diffusion coordinates ψk = λk φ_k.
+
+These operators satisfy:
+- continuity,
+- adjacency preservation,
+- spectral stability,
+- bounded holonomy,
+- Euclidean curvature K(p) = 0.
+
+Therefore, DiffusionGeometry belongs strictly to altitudes A3–A4.
+
+It does not interact with:
+- divergence membranes,
+- collapse surfaces,
+- non-dual algebra,
+- spectral tearing,
+- holonomy accumulation.
+
+This makes it altitude-safe and mathematically appropriate as an example operator
+family for runtime physics.
+
+---------------------------------------------------------------------------
+4. Why DiffusionGeometry Cannot Enter A6/A7
+---------------------------------------------------------------------------
+
+A6 dual algebra requires:
+- Euclidean geometry,
+- dual operator symmetry,
+- spectral continuity.
+
+A7 non-dual algebra requires:
+- non-Euclidean curvature K(p) > 0,
+- adjacency fracture,
+- spectral tearing,
+- holonomy accumulation,
+- discontinuous operators.
+
+DiffusionGeometry is incompatible with A7 because:
+- its operators are continuous,
+- its geometry is Euclidean,
+- its spectral modes decay smoothly,
+- its adjacency graph is stable.
+
+Thus, DiffusionGeometry is mathematically restricted to A3–A4.
+
+---------------------------------------------------------------------------
+5. Mathematical Role of the Python A4.5 Runtime Harness
+---------------------------------------------------------------------------
+
+The Python runtime harness implements:
+- altitude adjacency constraints,
+- membrane adjacency constraints,
+- determinism checks,
+- provenance monotonicity,
+- reversible transitions,
+- contamination-safe operator activation.
+
+Mathematically, the harness is a discrete approximation of the runtime manifold.
+It enforces the transition rules defined in A3RuntimePhysics.tex and prepares the
+ground for Lean formalization.
+
+The harness is not a simulation of A6/A7; it is a runtime physics engine for
+A3–A4.5.
+
+---------------------------------------------------------------------------
+6. Next Mathematical Steps
+---------------------------------------------------------------------------
+
+1. Generate A3RuntimePhysics.tex (full module).
+2. Define runtime patches as altitude-tagged manifolds.
+3. Formalize membrane invariants and operator classes.
+4. Integrate DiffusionGeometry as an example Euclidean operator family.
+5. Link A3RuntimePhysics.tex to the Python A4.5 harness.
+6. Prepare A4SpectralRuntime.tex and A5ModalRuntime.tex.
+7. Begin Lean formalization of runtime physics.
+
+This Developer Note ensures mathematical clarity as MAC transitions from
+altitude-model theory to executable runtime physics.
+`
+
+---
+
+
+🧭 Provenance Footer (drop‑in ready)
+
+`
+% ---------------------------------------------------------------------------
+% Provenance
+% DeveloperNoteRuntimePhysicsMathematics.tex
+% Author: Borealis S. Hedling
+% Altitude: A3 → A4.5
+% Surface: Structural-AI/Runtime-Physics
+% Version: v1.0
+% Created: 18 October 2026, Dublin, Ireland
+% Purpose: Provide mathematically explicit scaffolding for runtime physics,
+%          clarifying Euclidean vs non-Euclidean geometry, membrane constraints,
+%          determinism, provenance invariants, and the role of DiffusionGeometry
+%          within altitudes A3–A4. Establishes the conceptual bridge between
+%          theoretical runtime physics and the Python A4.5 implementation layer.
+% ---------------------------------------------------------------------------
+`
+
