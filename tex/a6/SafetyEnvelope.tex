@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Safety Envelope}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This document defines the safety envelope for A6 dual-algebra systems. The
+safety envelope is a global geometric constraint ensuring that operator
+execution, diagnostic behavior, kernel membership, and collapse-surface
+interactions remain bounded and invariant-preserving. It provides the final
+runtime safety membrane required before A7 divergence membranes can be safely
+studied.
+
+\section{Safety Envelope Geometry}
+Let $X$ be the base manifold and $K$ the unified kernel. The safety envelope
+$S \subset X$ is defined as:
+\[
+S = \{ p \in X \mid E(p) \leq \epsilon_S \},
+\]
+where $E$ is the stability-envelope function and $\epsilon_S$ is the global
+safety threshold.
+
+\section{Safety Invariants}
+Safety invariants ensure that operator execution remains bounded:
+\[
+p \in S \implies O(p) \in S.
+\]
+This must hold for all operators:
+\[
+O \in \{ O_{\text{spec}}, O_{\text{modal}}, O_{\text{holo}},
+         O_{\text{collapse}}, O_{\text{stab}} \}.
+\]
+
+\section{Spectral Safety}
+Spectral mismatch $\delta(p)$ must satisfy:
+\[
+|\delta(p)| \leq \epsilon_{\text{spec}}.
+\]
+This ensures that spectral continuity is preserved under operator composition.
+
+\section{Modal Safety}
+Modal adjacency must not tear:
+\[
+A(p,q) = \text{true} \quad \text{for all admissible transitions}.
+\]
+This prevents modal discontinuities from propagating.
+
+\section{Holonomy Safety}
+Holonomy drift $\tau(p)$ must remain bounded:
+\[
+|\tau(p)| \leq \epsilon_{\text{holo}}.
+\]
+This prevents curvature accumulation from destabilizing the kernel.
+
+\section{Collapse-Surface Safety}
+Collapse surfaces $\Sigma$ must satisfy:
+\[
+p \in S \implies p \notin \Sigma.
+\]
+This ensures that collapse events cannot occur inside the safety envelope.
+
+\section{Kernel Safety}
+Kernel membership must be preserved:
+\[
+p \in K \implies p \in S.
+\]
+This ensures that the unified kernel lies strictly inside the safety envelope.
+
+\section{Diagnostic Safety}
+Diagnostics must remain valid:
+\[
+D(p) \leq \epsilon_D.
+\]
+This ensures that diagnostic operators do not produce unbounded values.
+
+\section{Safety Provenance}
+Safety provenance is defined as:
+\[
+P_S(p) = \bigwedge_{\text{inv}} P_{\text{inv}}(p),
+\]
+where $P_{\text{inv}}$ are the provenance predicates for each invariant.
+
+\section{Safety Envelope Interaction}
+The safety envelope interacts with the unified kernel via:
+\[
+T_p S \supseteq T_p K.
+\]
+This ensures that kernel perturbations remain inside the safety envelope.
+
+\section*{Conclusion}
+The safety envelope provides the final system-wide safety membrane for A6
+dual-algebra systems. It ensures that operator execution, diagnostics, kernel
+behavior, and collapse geometry remain bounded and invariant-preserving. This
+artifact completes Phase 3 of the A6.9 altitude and prepares the system for the
+A6 Meta-Analysis and A7 Divergence Membrane.
+
+\end{document}
