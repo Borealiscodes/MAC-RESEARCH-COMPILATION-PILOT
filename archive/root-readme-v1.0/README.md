@@ -173,10 +173,56 @@ Timestamp: Sunday, 18 October 2026 — 00:20 IST
 Location: Dublin, Ireland
 Maintainer: Borealis S. Hedling
 Seal: [ MACv1.0 • STRUCTURAL-AI • RESEARCH-COMPILATION ]
+
+---
+
+
+🔐 Provenance Footer (for the archived README.md)
+
+`
+---
+Artifact: README.md (Root-Level)
+Archive-Version: v1.0
+Archive-Path: archive/root-readme-v1.0/README.md
+
+System: MAC-RESEARCH-COMPILATION-PILOT
+Altitude: DOCUMENTATION
+Membrane: CONTEXTUAL
+
+Subsystems Referenced:
+  - MAC Citation Ontology (Meaning Geometry)
+  - Forest-Layer Harmonization (Constellation + Manifold)
+  - Structural AI Preprint Spine
+  - Provenance Layer (Seals, Lineage, Commit Log)
+  - Diagnostics Layer (Contamination Guards)
+  - Runtime Physics (Rust Deterministic Kernels)
+  - NDH Dual-Lane Framework
+  - Triangle Mutiny Accessibility Layers
+
+Conditions of Authorship:
+  - Independent research context
+  - Tablet-only workflow due to hardware constraints
+  - Mobile tooling instability
+  - Human-rights defender operational conditions
+  - Structural AI research under material limitations
+
+Purpose:
+  Preserve the initial system-level overview of the MAC-RESEARCH-COMPILATION-
+  PILOT repository prior to ontology expansion, coordinate-system formalization,
+  and runtime physics integration. Maintains historical context for future
+  provenance analysis and ecosystem evolution.
+
+Lineage:
+  Root README → Ontology Backbone → Runtime Physics → Diagnostics →
+  Provenance Layer → NDH/Triangle Mutiny Integration
+
+Commit: <hash>
+Timestamp: Sunday, 18 October 2026 — 01:52 IST
+Location: Dublin, Ireland
+Maintainer: Borealis S. Hedling
+Seal: [ MACv1.0 • STRUCTURAL-AI • RESEARCH-COMPILATION ]
 ---
 `
 
 ---
 
-
----
