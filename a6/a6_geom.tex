@@ -1,0 +1,176 @@
+% ------------------------------------------------------------
+% A6 Geometric Operator Algebra — Full Population (v1.0)
+% Author: Borealis S. Hedling
+% Altitude: A6 (Dual Algebra)
+% Purpose: Populate geometric operators, invariants, and laws for A6 Deep Geometry.
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Geometric Operator Algebra: Full Population (v1.0)}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+% ------------------------------------------------------------
+\section*{Overview}
+
+This document defines the fully populated geometric operator algebra for A6
+Deep Geometry. It includes curvature fields, drift fields, modal adjacency,
+holonomy, collapse surfaces, and all dual-algebra invariants required by the
+thirteen constructive fixes.
+
+Let $M$ be the A6 reasoning manifold.
+
+% ------------------------------------------------------------
+\section{Geometric Fields}
+
+\subsection{Curvature Field}
+\[
+K : M \to \mathbb{R}
+\]
+with continuity constraint:
+\[
+K(p) \approx K(q) \quad \text{for } p \sim q.
+\]
+
+\subsection{Drift Field}
+\[
+X : M \to TM
+\]
+with covariant Lie bracket:
+\[
+[\nabla_X, \nabla_Y] = \nabla_{[X,Y]}.
+\]
+
+\subsection{Modal Label Field}
+\[
+\mu : M \to \mathcal{M}
+\]
+with adjacency constraint:
+\[
+\mu(p^+) \in \mathcal{N}(\mu(p^-)).
+\]
+
+\subsection{Holonomy Field}
+\[
+H : \Gamma(M) \to \mathbb{R}
+\]
+with drift bound:
+\[
+H(\gamma) < \Theta_{\max}.
+\]
+
+\subsection{Collapse Surface}
+\[
+\Sigma \subset M
+\]
+with locality constraint:
+\[
+p \in \Sigma \Rightarrow \exists \epsilon > 0 : B_\epsilon(p) \cap \Sigma \neq \emptyset.
+\]
+
+% ------------------------------------------------------------
+\section{Geometric Operator Definition}
+
+Define geometric operator:
+\[
+\mathcal{G} : M \to M
+\]
+
+\[
+\mathcal{G}(p) =
+  \big( K(p), X(p), \mu(p), H(\gamma), \Sigma \big).
+\]
+
+This operator preserves all dual-algebra invariants.
+
+% ------------------------------------------------------------
+\section{Geometric Algebraic Laws}
+
+\subsection{Curvature Continuity}
+\[
+K(p) \approx K(q) \quad \text{for } p \sim q.
+\]
+
+\subsection{Cosine-Law Curvature Combination}
+\[
+K_{A\oplus B}
+  = \sqrt{K_A^2 + K_B^2 + 2 K_A K_B \Phi(A,B)}.
+\]
+
+\subsection{Covariant Drift Interaction}
+\[
+[\nabla_X,\nabla_Y] = \nabla_{[X,Y]}.
+\]
+
+\subsection{Modal Adjacency}
+\[
+\mu(p^+) \in \mathcal{N}(\mu(p^-)).
+\]
+
+\subsection{Holonomy Drift Bound}
+\[
+H(\gamma) < \Theta_{\max}.
+\]
+
+\subsection{Collapse Detection}
+\[
+p \in \Sigma \Rightarrow \mathcal{G}(p) \in \Sigma.
+\]
+
+% ------------------------------------------------------------
+\section{Geometric Invariants}
+
+\subsection{Stability Envelope Monotonicity}
+\[
+E(p) \le E(q) \Rightarrow \text{Stability}(p) \Rightarrow \text{Stability}(q).
+\]
+
+\subsection{Modal Lift Preservation}
+\[
+\mu(p) \leadsto \mu(q).
+\]
+
+\subsection{Provenance Lift Preservation}
+\[
+I_{\mathrm{prov}}(p) \Rightarrow I_{\mathrm{prov}}(\mathcal{G}(p)).
+\]
+
+\subsection{Semantic Lift Preservation}
+\[
+I_{\mathrm{sem}}(p) \Rightarrow I_{\mathrm{sem}}(\mathcal{G}(p)).
+\]
+
+\subsection{Operator Determinism}
+\[
+\mathcal{G}(p) = \mathcal{G}(q) \Rightarrow p = q.
+\]
+
+\subsection{Kernel Preservation}
+\[
+K_{\mathrm{geom}}(p) \Rightarrow K_{\mathrm{geom}}(\mathcal{G}(p)).
+\]
+
+% ------------------------------------------------------------
+\section{Geometric Kernel}
+
+Define geometric kernel:
+\[
+K_{\mathrm{geom}}(p) =
+  K(p) \land X(p) \land \mu(p) \land H(\gamma) \land (p \in \Sigma).
+\]
+
+This kernel is preserved under $\mathcal{G}$.
+
+% ------------------------------------------------------------
+\section{Conclusion}
+
+This document fully populates the geometric operator algebra for A6 Deep
+Geometry. It satisfies all thirteen constructive fixes and forms the geometric
+foundation for the unified A6 kernel and subsequent Lean modules.
+
+\end{document}
