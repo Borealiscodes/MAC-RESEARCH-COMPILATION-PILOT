@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{MAC Forest-Layer Harmonization v1.0 \\ Constellation Geometry (Axiomatic Specification)}
+\author{Borealis S. Hedling}
+\date{18 October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Surface}
+Structural-AI / Research-Compilation \\
+Altitude: A2 (Meaning Geometry) \\
+Membrane: Structural \\
+Version: v1.0
+
+\section{Purpose}
+Define a formal axiomatic system for constellation-based harmonization in the
+MACv1.0 forest layer. Provide altitude-node axioms, membrane-edge axioms,
+reversibility axioms, contamination guards, and harmonization operators.
+
+\section{Primitive Sets}
+
+\subsection{Altitude Nodes}
+\[
+N = \{A0, A1, A2, A3, A4, A5\}
+\]
+
+\subsection{Membrane Edges}
+\[
+E = \{Neutral, Formal, Structural, Diagnostic, Provenance\}
+\]
+
+\subsection{Citation Classes}
+\[
+C = \{A, B, C, D, E\}
+\]
+
+\subsection{Harmonization Operators}
+Altitude harmonization:
+\[
+H_{alt} : N \times N \rightarrow \text{Traversal}
+\]
+
+Membrane harmonization:
+\[
+H_{mem} : E \times E \rightarrow \text{Traversal}
+\]
+
+Citation-class harmonization:
+\[
+H_{cls} : C \times C \rightarrow \text{Traversal}
+\]
+
+\section{Constellation Geometry Axioms}
+
+\begin{axiom}[Node Semantics]
+Each altitude node $A_i \in N$ represents a distinct semantic altitude:
+\[
+A0 = \text{Directional},\;
+A1 = \text{Seam},\;
+A2 = \text{Meaning},\;
+A3 = \text{Runtime},\;
+A4 = \text{Diagnostics},\;
+A5 = \text{Falsification}.
+\]
+\end{axiom}
+
+\begin{axiom}[Edge Semantics]
+Each membrane edge $e \in E$ represents a contamination-safe transition:
+\[
+\begin{aligned}
+Neutral &: A1 \leftrightarrow A2 \\
+Formal &: A0 \leftrightarrow A2 \\
+Structural &: A2 \leftrightarrow A3 \\
+Diagnostic &: A3 \leftrightarrow A4 \\
+Provenance &: A4 \leftrightarrow A5
+\end{aligned}
+\]
+\end{axiom}
+
+\begin{axiom}[Reversibility]
+All constellation harmonization operators are reversible:
+\[
+H_{alt}(A_i, A_j) = H_{alt}(A_j, A_i)
+\]
+\end{axiom}
+
+\begin{axiom}[Membrane Preservation]
+\[
+H_{mem}(e_i, e_j) \Rightarrow e_i = e_j
+\]
+No harmonization may change membrane category.
+\end{axiom}
+
+\begin{axiom}[Citation-Class Preservation]
+\[
+H_{cls}(c_i, c_j) \Rightarrow c_i = c_j
+\]
+Citation class must remain invariant under harmonization.
+\end{axiom}
+
+\section{Contamination Guards}
+
+\begin{axiom}[No Runtime Activation]
+No constellation traversal may activate runtime physics:
+\[
+\neg H_{alt}(A2, A3)
+\]
+unless Structural membrane invariants are satisfied.
+\end{axiom}
+
+\begin{axiom}[No Falsification Activation]
+No constellation traversal may activate A5:
+\[
+\neg H_{alt}(A4, A5)
+\]
+unless Diagnostic and Provenance invariants are satisfied.
+\end{axiom}
+
+\begin{axiom}[No Semantic Continuity]
+No traversal may introduce semantic continuity at A1 or A2.
+\end{axiom}
+
+\begin{axiom}[No Generative Assumptions]
+No traversal may introduce generative-model assumptions.
+\end{axiom}
+
+\begin{axiom}[No Node Collapse]
+Altitude nodes may not be merged:
+\[
+A_i \neq A_j \quad \forall i \neq j
+\]
+\end{axiom}
+
+\section{Forest Invariants}
+
+\begin{axiom}[Altitude Invariant]
+All constellation paths preserve altitude tags.
+\end{axiom}
+
+\begin{axiom}[Membrane Invariant]
+All constellation paths preserve membrane category.
+\end{axiom}
+
+\begin{axiom}[Class Invariant]
+All constellation paths preserve citation class.
+\end{axiom}
+
+\begin{axiom}[Reversibility Invariant]
+All constellation paths must be reversible.
+\end{axiom}
+
+\section{Maintainer}
+Borealis S. Hedling \\
+Dublin, Ireland
