@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amssymb}
+
+\title{MACv1.0 Runtime Physics: Manifold Geometry}
+\author{Borealis S. Hedling}
+\date{Version 1.0 — Altitude A3 (Formal Membrane)}
+
+\begin{document}
+\maketitle
+
+\section*{Artifact Metadata}
+\begin{itemize}
+  \item Artifact-Class: Runtime-Physics
+  \item Artifact-Name: runtime-physics-manifold
+  \item Surface: Structural-AI/Runtime-Physics
+  \item Altitude: A3 (Runtime Physics)
+  \item Membrane: Formal
+\end{itemize}
+
+\section{Purpose}
+This document defines the manifold-geometry runtime physics model for MACv1.0.
+It formalizes runtime patches, activation charts, atlas invariants, membrane
+constraints, and reversible transitions. These definitions form the operational
+counterpart to manifold harmonization in the ontology layer and support
+deterministic kernel implementations in Rust and Python.
+
+\section{Runtime Patches}
+
+Let $\mathcal{A} = \{A0, A1, A2, A3, A4, A5\}$ denote the altitude set.
+
+A \textbf{runtime patch} is defined as:
+\[
+P = (a, m, U)
+\]
+where:
+\begin{itemize}
+  \item $a \in \mathcal{A}$ is the altitude tag,
+  \item $m$ is the membrane tag,
+  \item $U$ is an open region representing the local runtime domain.
+\end{itemize}
+
+Patch properties:
+\begin{itemize}
+  \item altitude-tagged
+  \item membrane-tagged
+  \item locally reversible
+  \item contamination-safe
+\end{itemize}
+
+\section{Activation Charts}
+
+An activation chart is a function:
+\[
+\phi : U \rightarrow V
+\]
+mapping one patch domain to another.
+
+Chart requirements:
+\begin{itemize}
+  \item deterministic
+  \item membrane-preserving
+  \item altitude-consistent
+  \item reversible unless provenance-bound
+\end{itemize}
+
+\section{Atlas Structure}
+
+A runtime atlas is a set:
+\[
+\mathcal{M} = \{(P_i, \phi_{ij})\}
+\]
+where $P_i$ are patches and $\phi_{ij}$ are activation charts.
+
+Atlas invariants:
+\begin{itemize}
+  \item full coverage of runtime states
+  \item no gaps between patches
+  \item no overlapping membranes
+  \item reversible transitions across charts
+\end{itemize}
+
+\section{Runtime Operators}
+
+An operator acts on charts rather than edges.
+
+\subsection{Activation Operator}
+\[
+O_{\text{act}} : P_i \rightarrow P_j
+\]
+
+\subsection{Transition Operator}
+\[
+O_{\text{trans}} : P_i \rightarrow P_j
+\]
+
+\subsection{Reversal Operator}
+\[
+O_{\text{rev}} : P_j \rightarrow P_i
+\]
+
+\subsection{Guard Operator}
+\[
+O_{\text{guard}} : P_i \rightarrow P_i
+\]
+
+Operator constraints:
+\begin{itemize}
+  \item preserve membrane semantics
+  \item maintain altitude invariants
+  \item avoid contamination
+  \item remain deterministic
+\end{itemize}
+
+\section{Membrane Constraints}
+
+Allowed transitions:
+\[
+\text{Structural} \rightarrow \text{Formal} \rightarrow \text{Diagnostic} \rightarrow \text{Provenance}
+\]
+
+Forbidden:
+\begin{itemize}
+  \item membrane skipping
+  \item altitude skipping
+  \item transitions without charts
+  \item reverse transitions without $O_{\text{rev}}$
+\end{itemize}
+
+\section{Reversibility}
+
+A chart transition $\phi_{ij}$ is reversible if:
+\[
+\exists O_{\text{rev}} : P_j \rightarrow P_i
+\]
+
+Reversal must preserve:
+\begin{itemize}
+  \item membrane semantics
+  \item altitude invariants
+  \item contamination-free behavior
+\end{itemize}
+
+\section{Runtime Invariants}
+
+\begin{itemize}
+  \item No patch skipping
+  \item No membrane violation
+  \item No contamination propagation
+  \item All transitions deterministic
+  \item All transitions logged in provenance layer
+\end{itemize}
+
+\section{Rust Integration}
+
+Rust modules implementing these semantics:
+\begin{itemize}
+  \item altitudes.rs
+  \item membranes.rs
+  \item citation\_classes.rs
+  \item provenance.rs
+  \item guards.rs
+\end{itemize}
+
+\section{Python Integration}
+
+Python scaffolding provides:
+\begin{itemize}
+  \item chart validation
+  \item patch transition tests
+  \item diagnostic hooks
+\end{itemize}
+
+\section{Relationship to Ontology}
+
+Manifold runtime physics is the operational counterpart to manifold harmonization
+in the ontology layer. Ontology defines meaning geometry; runtime physics defines
+operational geometry.
+
+\end{document}
