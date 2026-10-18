@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amssymb}
+
+\title{MACv1.0 Runtime Physics: Constellation Geometry}
+\author{Borealis S. Hedling}
+\date{Version 1.0 — Altitude A3 (Formal Membrane)}
+
+\begin{document}
+\maketitle
+
+\section*{Artifact Metadata}
+\begin{itemize}
+  \item Artifact-Class: Runtime-Physics
+  \item Artifact-Name: runtime-physics-constellation
+  \item Surface: Structural-AI/Runtime-Physics
+  \item Altitude: A3 (Runtime Physics)
+  \item Membrane: Formal
+\end{itemize}
+
+\section{Purpose}
+This document defines the constellation-geometry runtime physics model for
+MACv1.0. It formalizes runtime operators, membrane constraints, reversible
+altitude transitions, and contamination-safe invariants. These definitions form
+the foundation for deterministic kernel implementations in Rust and Python.
+
+\section{Constellation Runtime Model}
+
+\subsection{Runtime States}
+Let $\mathcal{A} = \{A0, A1, A2, A3, A4, A5\}$ denote the altitude set.
+
+A \textbf{runtime state} is a pair:
+\[
+S = (a, m)
+\]
+where $a \in \mathcal{A}$ and $m$ is a membrane tag.
+
+\subsection{Transitions}
+A transition is a function:
+\[
+T : S \rightarrow S'
+\]
+subject to membrane and altitude constraints.
+
+\subsection{Operators}
+An operator is a membrane-bounded function:
+\[
+O : S \rightarrow S'
+\]
+with the following properties:
+\begin{itemize}
+  \item altitude-preserving or altitude-adjacent
+  \item membrane-preserving
+  \item deterministic
+  \item reversible unless provenance-bound
+\end{itemize}
+
+\section{Operator Classes}
+
+\subsection{Activation Operator}
+\[
+O_{\text{act}} : S \rightarrow S'
+\]
+initiates a transition.
+
+\subsection{Transition Operator}
+\[
+O_{\text{trans}} : S \rightarrow S'
+\]
+moves between adjacent altitudes.
+
+\subsection{Reversal Operator}
+\[
+O_{\text{rev}} : S' \rightarrow S
+\]
+restores a previous runtime state.
+
+\subsection{Guard Operator}
+\[
+O_{\text{guard}} : S \rightarrow S
+\]
+prevents contamination or membrane violation.
+
+\section{Membrane Constraints}
+
+Allowed transitions:
+\[
+\text{Structural} \rightarrow \text{Formal} \rightarrow \text{Diagnostic} \rightarrow \text{Provenance}
+\]
+
+Forbidden:
+\begin{itemize}
+  \item membrane skipping
+  \item altitude skipping
+  \item reverse transitions without $O_{\text{rev}}$
+\end{itemize}
+
+\section{Reversibility}
+
+A transition $T$ is reversible if:
+\[
+\exists O_{\text{rev}} : T(S) \rightarrow S
+\]
+
+Reversal must preserve:
+\begin{itemize}
+  \item membrane semantics
+  \item altitude invariants
+  \item contamination-free behavior
+\end{itemize}
+
+\section{Runtime Invariants}
+
+\begin{itemize}
+  \item No altitude skipping
+  \item No membrane violation
+  \item No contamination propagation
+  \item All transitions deterministic
+  \item All transitions logged in provenance layer
+\end{itemize}
+
+\section{Rust Integration}
+
+Rust modules implementing these semantics:
+\begin{itemize}
+  \item altitudes.rs
+  \item membranes.rs
+  \item citation\_classes.rs
+  \item provenance.rs
+  \item guards.rs
+\end{itemize}
+
+\section{Python Integration}
+
+Python scaffolding provides:
+\begin{itemize}
+  \item operator tests
+  \item runtime validation
+  \item diagnostic hooks
+\end{itemize}
+
+\section{Relationship to Ontology}
+
+Constellation runtime physics is the operational counterpart to constellation
+harmonization in the ontology layer. Ontology defines meaning geometry; runtime
+physics defines operational geometry.
+
+\end{document}
