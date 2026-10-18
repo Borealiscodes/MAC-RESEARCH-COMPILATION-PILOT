@@ -1,0 +1,182 @@
+% ---------------------------------------------------------------------------
+% Developer Note — A7.2 Toolchain Architecture & Runtime Integration
+% Author: Borealis S. Hedling
+% Altitude: A7.2 (Non-Dual Layer)
+% Purpose: Describe the system-agnostic toolchain required to implement
+%          collapse-surface repair, outline dependencies, and explain how
+%          A7.2 integrates with Lean formalization and runtime execution.
+% ---------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+
+\title{Developer Note — A7.2 Toolchain Architecture and Runtime Integration}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+
+This Developer Note outlines the system-agnostic toolchain required to implement
+the A7.2 Collapse-Surface Repair Protocol. It describes the four-layer
+architecture, the dependencies for each layer, and how the resulting artifacts
+integrate with Lean formalization and runtime execution. This note is required
+before implementing the A7.2 tools.
+
+% ---------------------------------------------------------------------------
+\section{Toolchain Overview}
+
+The A7.2 repair pipeline consists of four interoperable layers:
+
+\begin{enumerate}
+  \item Collapse-Surface Detector (Python / FEniCS / Dedalus)
+  \item Non-Dual Projection Engine (Rust / WASM)
+  \item Collapse-Surface Serializer (JSON / Protocol Buffers)
+  \item Dual-Compatible Lift Engine (Lean 4 / Mathlib)
+\end{enumerate}
+
+Each layer corresponds to a distinct altitude boundary and enforces specific
+invariants.
+
+% ---------------------------------------------------------------------------
+\section{Layer 1: Collapse-Surface Detector}
+
+\textbf{Purpose:} Identify broken geometry at A7 altitude.
+
+\textbf{Dependencies:}
+\begin{itemize}
+  \item Python 3.11+
+  \item FEniCS / Dolfin (FEM)
+  \item Dedalus (spectral methods)
+  \item PETSc / SLEPc (eigenvalue solvers)
+\end{itemize}
+
+\textbf{Detections:}
+\begin{itemize}
+  \item curvature singularities,
+  \item spectral tears,
+  \item modal discontinuities,
+  \item holonomy fractures.
+\end{itemize}
+
+This layer produces raw collapse-surface candidates $\Sigma_{\mathrm{raw}}$.
+
+% ---------------------------------------------------------------------------
+\section{Layer 2: Non-Dual Projection Engine}
+
+\textbf{Purpose:} Apply non-dual projection operators to reconcile broken geometry.
+
+\textbf{Dependencies:}
+\begin{itemize}
+  \item Rust 1.80+
+  \item WASM target (optional)
+  \item Serde / Serde JSON
+\end{itemize}
+
+\textbf{Functions:}
+\begin{itemize}
+  \item non-idempotent projection,
+  \item spectral tear closure,
+  \item modal adjacency restoration,
+  \item collapse-surface mapping.
+\end{itemize}
+
+This layer produces stable collapse surfaces $\Sigma$.
+
+% ---------------------------------------------------------------------------
+\section{Layer 3: Collapse-Surface Serializer}
+
+\textbf{Purpose:} Encode collapse surfaces for reintegration.
+
+\textbf{Dependencies:}
+\begin{itemize}
+  \item JSON Schema (Draft 2020-12)
+  \item Protocol Buffers (optional)
+\end{itemize}
+
+\textbf{Serialized Fields:}
+\begin{itemize}
+  \item collapse coordinates,
+  \item spectral tear metadata,
+  \item modal adjacency restoration metadata,
+  \item provenance reconstruction metadata.
+\end{itemize}
+
+This layer produces $\Sigma_{\mathrm{encoded}}$.
+
+% ---------------------------------------------------------------------------
+\section{Layer 4: Dual-Compatible Lift Engine}
+
+\textbf{Purpose:} Reintegration of collapse surfaces into A6 dual algebra.
+
+\textbf{Dependencies:}
+\begin{itemize}
+  \item Lean 4
+  \item Mathlib 4
+\end{itemize}
+
+\textbf{Functions:}
+\begin{itemize}
+  \item dual-compatible lift,
+  \item continuity restoration,
+  \item adjacency restoration,
+  \item kernel reconstruction,
+  \item spectral stability enforcement.
+\end{itemize}
+
+This layer produces $\iota(\Sigma)$, a dual-compatible reintegration.
+
+% ---------------------------------------------------------------------------
+\section{Altitude Discipline}
+
+The toolchain enforces altitude boundaries:
+
+\begin{itemize}
+  \item A7.0–A7.2: non-dual algebra, collapse surfaces, projection.
+  \item A6.5: firewall preventing non-dual leakage.
+  \item A6: dual algebra reintegration.
+\end{itemize}
+
+No non-dual operator may descend into A6 without passing through the lift engine.
+
+% ---------------------------------------------------------------------------
+\section{Lean Formalization Integration}
+
+Lean formalization is used to:
+
+\begin{itemize}
+  \item verify dual-compatible lifts,
+  \item enforce kernel reconstruction,
+  \item prove continuity restoration,
+  \item validate adjacency preservation,
+  \item guarantee spectral stability.
+\end{itemize}
+
+Lean does not execute non-dual operators; it verifies the reintegration.
+
+% ---------------------------------------------------------------------------
+\section{Runtime Execution Integration}
+
+Runtime execution follows:
+
+\begin{enumerate}
+  \item Python detects broken geometry.
+  \item Rust reconciles geometry via non-dual projection.
+  \item JSON serializes collapse surfaces.
+  \item Lean verifies reintegration.
+  \item A6 runtime resumes.
+\end{enumerate}
+
+This ensures drift-neutral, altitude-safe execution.
+
+% ---------------------------------------------------------------------------
+\section{Conclusion}
+
+This Developer Note defines the toolchain architecture, dependencies, and
+altitude boundaries required to implement A7.2 collapse-surface repair. It also
+explains how Lean formalization and runtime execution integrate with the
+non-dual repair pipeline. This note must be completed before building the tools.
+
+\end{document}
