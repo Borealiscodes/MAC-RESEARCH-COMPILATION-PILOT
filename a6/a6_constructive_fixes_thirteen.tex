@@ -1,0 +1,174 @@
+% ------------------------------------------------------------
+% A6 Constructive Fixes — Thirteen Dual-Algebra Boundary Conditions (v1.0)
+% Author: Borealis S. Hedling
+% Altitude: A6.5 (Boundary Layer)
+% Purpose: Define the full dual-algebra firewall required before A7 non-dual
+%          algebra can be safely introduced.
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{A6 Constructive Fixes: Thirteen Dual-Algebra Boundary Conditions}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+
+This document defines the thirteen constructive fixes required to maintain
+dual-algebra correctness at A6 altitude. These fixes enforce continuity,
+adjacency, spectral stability, holonomy bounds, collapse locality, stability
+monotonicity, provenance lift, semantic lift, operator determinism, and kernel
+preservation. They form the mathematical firewall preventing non-dual algebra
+from leaking downward into A6.
+
+% ------------------------------------------------------------
+\section{Fix 1: Curvature Continuity}
+
+Curvature must vary continuously across the manifold:
+\[
+K(p) \approx K(q) \quad \text{for } p \sim q.
+\]
+
+This prevents geometric tearing.
+
+% ------------------------------------------------------------
+\section{Fix 2: Cosine-Law Curvature Combination}
+
+Curvature magnitudes must combine via:
+\[
+K_{A\oplus B}
+  = \sqrt{K_A^2 + K_B^2 + 2 K_A K_B \Phi(A,B)}.
+\]
+
+\textbf{Theorem (Uniqueness).}
+The cosine-law is the unique non-orthogonal metric combination preserving the
+triangle inequality.
+
+% ------------------------------------------------------------
+\section{Fix 3: Drift-Field Interaction (Covariant Lie Bracket)}
+
+Drift fields must interact via:
+\[
+[\nabla_X,\nabla_Y] = \nabla_{[X,Y]}.
+\]
+
+\textbf{Theorem (Uniqueness).}
+The covariant Lie bracket is the unique operator-preserving commutator.
+
+% ------------------------------------------------------------
+\section{Fix 4: Modal Adjacency}
+
+Modal transitions must satisfy adjacency:
+\[
+\mu(p^+) \in \mathcal{N}(\mu(p^-)).
+\]
+
+This preserves semantic coherence.
+
+% ------------------------------------------------------------
+\section{Fix 5: Spectral Continuity}
+
+Operator spectra must vary continuously:
+\[
+\mathrm{Spec}(L(p)) \text{ continuous in } p.
+\]
+
+This prevents spectral tearing.
+
+% ------------------------------------------------------------
+\section{Fix 6: Spectral Mismatch Bound}
+
+Spectral mismatch must remain bounded:
+\[
+\delta_{\mathrm{spec}}(p) < \epsilon.
+\]
+
+This ensures spectral stability.
+
+% ------------------------------------------------------------
+\section{Fix 7: Holonomy Drift Bound}
+
+Holonomy must remain bounded:
+\[
+H(\gamma) < \Theta_{\max}.
+\]
+
+This prevents holonomy fracture.
+
+% ------------------------------------------------------------
+\section{Fix 8: Collapse-Surface Locality}
+
+Collapse surfaces must be locally detectable:
+\[
+p \in \Sigma \Rightarrow \exists \epsilon > 0 : B_\epsilon(p) \cap \Sigma \neq \emptyset.
+\]
+
+This prevents collapse smearing.
+
+% ------------------------------------------------------------
+\section{Fix 9: Stability Envelope Monotonicity}
+
+Stability envelopes must be monotone:
+\[
+E(p) \le E(q) \Rightarrow \text{Stability}(p) \Rightarrow \text{Stability}(q).
+\]
+
+This prevents envelope inversion.
+
+% ------------------------------------------------------------
+\section{Fix 10: Modal Lift Preservation}
+
+Modal truth must lift correctly:
+\[
+\mu(p) \leadsto \mu(q).
+\]
+
+This preserves semantic invariants.
+
+% ------------------------------------------------------------
+\section{Fix 11: Provenance Lift Preservation}
+
+Provenance must lift through operators:
+\[
+I_{\mathrm{prov}}(M) \Rightarrow I_{\mathrm{prov}}(\mathcal{A}(M,S)).
+\]
+
+This prevents provenance discontinuity.
+
+% ------------------------------------------------------------
+\section{Fix 12: Semantic Lift Preservation}
+
+Semantic validity must lift:
+\[
+I_{\mathrm{sem}}(M) \Rightarrow I_{\mathrm{sem}}(\mathcal{A}(M,S)).
+\]
+
+This prevents semantic drift.
+
+% ------------------------------------------------------------
+\section{Fix 13: Operator Determinism and Kernel Preservation}
+
+Operators must be deterministic:
+\[
+\mathcal{O}(p) = \mathcal{O}(q) \Rightarrow p = q.
+\]
+
+Operators must preserve the unified kernel:
+\[
+K_{\mathrm{A6}}(p) \Rightarrow K_{\mathrm{A6}}(\mathcal{O}(p)).
+\]
+
+This prevents kernel fracture.
+
+% ------------------------------------------------------------
+\section{Conclusion}
+
+These thirteen constructive fixes define the dual-algebra firewall required
+before A7 non-dual algebra can be introduced. They ensure geometric, spectral,
+modal, holonomic, semantic, and provenance stability across the A6 manifold.
+
+\end{document}
