@@ -9,96 +9,173 @@ Altitude A3 • Formal Membrane
 Artifact-Class: Runtime-Physics
 Artifact-Name: runtime-physics-constellation
 Surface: Structural-AI/Runtime-Physics
-Version: v1.0
+Version: v1.1
 Altitude: A3 (Runtime Physics)
 Membrane: Formal
 
 Purpose:
-  Define the constellation-geometry runtime physics model for MACv1.0. This
+  Define the constellation-geometry runtime physics model for MACv1.0 using
+  visually structured sections, operator classes, and membrane callouts. This
   artifact specifies runtime operators, reversible altitude transitions,
   membrane-preserving activation rules, and contamination-safe runtime
   invariants. It forms the conceptual foundation for deterministic kernels
   implemented in Rust and Python.
 
-Overview:
-  Runtime physics governs how MAC transitions between altitudes during active
-  computation. While the ontology layer defines meaning geometry, runtime
-  physics defines operational geometry: how operators activate, how membranes
-  constrain transitions, and how reversible structures behave under load.
+────────────────────────────────────────
+⚙️ Runtime Physics Overview
+────────────────────────────────────────
 
-Constellation Runtime Model:
-  The constellation model represents runtime states as nodes and transitions as
-  edges. Each node corresponds to an altitude-specific runtime patch, and each
-  edge corresponds to a membrane-constrained operator.
+Runtime physics governs how MAC transitions between altitudes during active
+computation. Ontology defines meaning geometry; runtime physics defines
+operational geometry.
 
-Definitions:
+• Altitudes → runtime states  
+• Membranes → runtime constraints  
+• Operators → runtime transitions  
+• Constellation → runtime coordinate system  
 
-  Node:
-    A runtime state associated with a specific altitude and membrane.
+────────────────────────────────────────
+🌌 Constellation Runtime Model
+────────────────────────────────────────
 
-  Edge:
-    A reversible transition between nodes, activated by a runtime operator.
+The constellation model represents runtime states as nodes and transitions as
+edges. Each node corresponds to an altitude-specific runtime patch, and each
+edge corresponds to a membrane-constrained operator.
 
-  Operator:
-    A membrane-tagged function that triggers a transition between nodes.
+Node (Runtime Patch):
+  • altitude-tagged  
+  • membrane-tagged  
+  • reversible  
 
-Runtime Operators:
-  Operators are altitude-bounded and membrane-constrained. Each operator must:
-    • preserve membrane semantics
-    • maintain altitude invariants
-    • avoid contamination
-    • support reversibility
+Edge (Runtime Transition):
+  • operator-activated  
+  • contamination-safe  
+  • deterministic  
 
-  Operator Types:
-    • Activation Operator
-    • Transition Operator
-    • Reversal Operator
-    • Guard Operator
+Operator (Runtime Function):
+  • membrane-bounded  
+  • altitude-preserving  
+  • reversible unless provenance-bound  
+
+────────────────────────────────────────
+🧩 Runtime Node Diagram (ASCII-Safe)
+────────────────────────────────────────
+
+Nodes:
+  [A0] • [A1] • [A2] • [A3] • [A4] • [A5]
+
+Edges:
+  A0 → A1 → A2 → A3 → A4 → A5
+
+Reversal:
+  A5 ⇢ A4 ⇢ A3 ⇢ A2 ⇢ A1 ⇢ A0
 
 Membrane Constraints:
-  Runtime transitions must respect membrane rules:
-    • Structural → Formal transitions allowed
-    • Formal → Diagnostic transitions allowed
-    • Diagnostic → Provenance transitions allowed
-    • No reverse transitions without reversal operators
-    • No cross-altitude jumps
+  Structural → Formal → Diagnostic → Provenance
 
-Reversibility:
-  All runtime transitions must be reversible unless explicitly marked as
-  provenance-bound. Reversal operators restore previous runtime states without
-  contamination.
+────────────────────────────────────────
+⚙️ Operator Classes
+────────────────────────────────────────
 
-Runtime Invariants:
-  • No altitude skipping
-  • No membrane violation
-  • No contamination propagation
-  • All transitions logged in provenance layer
-  • All operators deterministic
+• 🔸 Activation Operator  
+  Initiates a runtime transition.
 
-Rust Integration:
-  The following Rust modules implement the runtime physics defined here:
-    • altitudes.rs
-    • membranes.rs
-    • citation_classes.rs
-    • provenance.rs
-    • guards.rs
+• 🔹 Transition Operator  
+  Moves between altitude patches.
 
-Python Integration:
-  Python scaffolding provides:
-    • operator tests
-    • runtime validation
-    • diagnostic hooks
+• 🔻 Reversal Operator  
+  Restores previous runtime state.
 
-Relationship to Ontology:
-  Ontology defines meaning geometry.
-  Runtime physics defines operational geometry.
-  Constellation runtime physics is the operational counterpart to constellation
-  harmonization in the ontology layer.
+• 🔺 Guard Operator  
+  Prevents contamination or membrane violation.
+
+Operator Requirements:
+  • deterministic  
+  • reversible (unless provenance-bound)  
+  • membrane-safe  
+  • altitude-preserving  
+
+────────────────────────────────────────
+🛡️ Membrane Constraints
+────────────────────────────────────────
+
+Allowed Transitions:
+  • Structural → Formal  
+  • Formal → Diagnostic  
+  • Diagnostic → Provenance  
+
+Forbidden:
+  • Reverse transitions without reversal operators  
+  • Cross-altitude jumps  
+  • Membrane skipping  
+
+────────────────────────────────────────
+🔁 Reversibility Rules
+────────────────────────────────────────
+
+Reversal operators must:
+  • restore previous runtime state  
+  • preserve membrane semantics  
+  • avoid contamination  
+  • maintain altitude invariants  
+
+Reversal Diagram:
+  Forward:   A2 → A3 → A4  
+  Reverse:   A4 ⇢ A3 ⇢ A2  
+
+────────────────────────────────────────
+📐 Runtime Invariants
+────────────────────────────────────────
+
+• No altitude skipping  
+• No membrane violation  
+• No contamination propagation  
+• All transitions deterministic  
+• All transitions logged in provenance layer  
+
+────────────────────────────────────────
+🦀 Rust Integration
+────────────────────────────────────────
+
+Rust modules implementing this runtime physics:
+
+• altitudes.rs  
+• membranes.rs  
+• citation_classes.rs  
+• provenance.rs  
+• guards.rs  
+
+────────────────────────────────────────
+🐍 Python Integration
+────────────────────────────────────────
+
+Python scaffolding provides:
+
+• operator tests  
+• runtime validation  
+• diagnostic hooks  
+
+────────────────────────────────────────
+🔗 Relationship to Ontology
+────────────────────────────────────────
+
+Ontology Layer (A2):
+  • defines meaning geometry  
+  • defines harmonization geometry  
+  • defines coordinate systems  
+
+Runtime Physics Layer (A3):
+  • defines operational geometry  
+  • defines activation rules  
+  • defines reversible transitions  
+
+Constellation runtime physics is the operational counterpart to constellation
+harmonization in the ontology layer.
 
 Maintainer: Borealis S. Hedling
 Compiler: Microsoft Copilot
 Location: Dublin, Ireland
-Timestamp: 18 October 2026 — 01:58 IST
+Timestamp: 18 October 2026 — 02:10 IST
 Seal: [ RUNTIME-PHYSICS • CONSTELLATION • MACv10 ]
 ---
 `
