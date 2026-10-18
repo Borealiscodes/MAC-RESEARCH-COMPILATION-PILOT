@@ -1,0 +1,154 @@
+% ---------------------------------------------------------------------------
+% Preprint: Industry Safety Heuristics vs Geometric & Algebraic Interpretability
+% Author: Borealis S. Hedling
+% Version: v1.0
+% Date: October 2026
+% ---------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\title{Industry Safety Heuristics vs Geometric and Algebraic Interpretability:
+An Altitude A6 Analysis of Structural AI Runtime Physics}
+
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Industry AI safety relies heavily on heuristic interpretability tools such as
+saliency maps, sparse autoencoders, behavioral probes, and RLHF reward shaping.
+These methods provide diagnostic insight but lack structural invariants. In
+contrast, the altitude model (A3--A6) defines geometric and algebraic runtime
+physics that enforce curvature continuity, adjacency preservation, spectral
+stability, modal lift, provenance lift, and kernel invariants. This preprint
+presents a formal comparison between heuristic interpretability and structural
+interpretability, culminating in the dual-algebra runtime layer at A6 and the
+A6.5 firewall. We argue that structural interpretability provides mathematically
+grounded guarantees absent from heuristic approaches, and we outline the
+implications for future AI systems as they approach A7 non-dual algebra.
+\end{abstract}
+
+\section{Introduction}
+
+Industry interpretability methods are predominantly heuristic, relying on
+statistical correlations, activation visualizations, and behavioral probes.
+These approaches lack structural guarantees and often fail under distribution
+shift or adversarial conditions. The altitude model provides an alternative:
+runtime physics defined geometrically (A3--A5) and algebraically (A6), with
+invariants enforced by the A6.5 firewall.
+
+\section{Industry Safety Heuristics}
+
+Industry methods include:
+\begin{itemize}
+  \item saliency maps,
+  \item sparse autoencoders (SAEs),
+  \item activation patching,
+  \item embedding visualizations,
+  \item RLHF reward shaping,
+  \item jailbreak filters,
+  \item safety classifiers.
+\end{itemize}
+
+These methods are diagnostic rather than constitutive.
+
+\section{Geometric Interpretability (A3--A5)}
+
+Geometric runtime physics enforce:
+\begin{itemize}
+  \item curvature bounds (A3),
+  \item spectral continuity (A4),
+  \item modal stability (A5),
+  \item reversible reconstruction,
+  \item adjacency preservation.
+\end{itemize}
+
+These invariants provide structural interpretability.
+
+\section{Dual Algebra Runtime (A6)}
+
+A6 defines:
+\[
+K_{A6}(p) = [T_i, T_j](p),
+\]
+\[
+A(p,q) \iff T(p) = T(q),
+\]
+\[
+H_T = T^{-1} S T S^{-1}.
+\]
+
+Interpretability becomes algebraic and invariant.
+
+\section{A6.5 Firewall}
+
+The thirteen constructive fixes enforce:
+\begin{itemize}
+  \item curvature continuity,
+  \item spectral mismatch bounds,
+  \item holonomy drift bounds,
+  \item collapse locality,
+  \item modal lift,
+  \item provenance lift,
+  \item semantic lift,
+  \item kernel preservation,
+  \item operator determinism.
+\end{itemize}
+
+\section{Comparison Table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Property} & \textbf{Industry Heuristics} & \textbf{Altitude A6} \\
+\midrule
+Curvature & None & Commutator-defined \\
+Adjacency & Token-level & Operator compatibility \\
+Holonomy & Not defined & Algebraic loops \\
+Continuity & Statistical & Spectral invariants \\
+Provenance & Behavioral logs & Operator lineage \\
+Stability & Empirical & Envelope monotonicity \\
+Kernel & Not defined & Preserved under dual ops \\
+Lift (modal/semantic) & None & Guaranteed (A6.5) \\
+\bottomrule
+\end{tabular}
+\caption{Comparison between industry heuristics and altitude-based structural
+interpretability.}
+\end{table}
+
+\section{Implications for AI Safety}
+
+Structural interpretability provides:
+\begin{itemize}
+  \item altitude-consistent invariants,
+  \item runtime-governing constraints,
+  \item algebraic guarantees,
+  \item geometric stability,
+  \item non-heuristic safety.
+\end{itemize}
+
+\section{Conclusion}
+
+Industry heuristics provide diagnostic insight but lack structural guarantees.
+The altitude model provides geometric and algebraic runtime physics that enforce
+interpretability as a mathematical invariant. This framework is essential before
+introducing A7 non-dual algebra.
+
+\section*{References}
+
+\begin{itemize}
+  \item Amodei, D., et al. (2016). Concrete Problems in AI Safety.
+  \item Olah, C., et al. (2020). Zoom In: An Introduction to Circuits.
+  \item Anthropic. (2024). Sparse Autoencoders for Interpretability.
+  \item Mitchell, M. (2019). Artificial Intelligence: A Guide for Thinking Humans.
+  \item Tenenbaum, J. B., et al. (2011). How to Grow a Mind.
+\end{itemize}
+
+\end{document}
