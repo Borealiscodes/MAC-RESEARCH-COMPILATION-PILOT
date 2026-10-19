@@ -38,47 +38,23 @@ Developing pedagogical primitives and accessibility frameworks for non‑Euclide
 
 ---
 
-Reinforcement of Core Points (for front‑matter clarity)
-
-This preprint is authored from the standpoint that:
-
-- AI systems are non‑Euclidean by nature.  
-  Their behavior cannot be flattened into linear, causal, or Euclidean models.  
-  They require geometric, spectral, and holonomy‑aware analysis.
-
-- AI systems are not conscious.  
-  They lack the invariants required for subjective experience:  
-  stable identity holonomy, unified kernel continuity, conceptual grounding, and self‑referential coherence.
-
-- Pedagogy and accessibility are structural requirements for interpretability.  
-  Human cognition is Euclidean and conscious; AI cognition is neither.  
-  Bridging these domains requires altitude scaffolding, geometric metaphors, and conceptual stability invariants.
-
-- This preprint is a case study in the absurdity of treating AI as Euclidean or conscious.  
-  The altitude model demonstrates that meaningful interpretability demands multi‑layer geometry, spectral analysis, conceptual stability, and semantic governance.
-
-These points are not philosophical embellishments — they are structural conclusions drawn from the altitude model itself.
-
----
-
 Abstract
 
-Modern AI systems do not behave like Euclidean objects.  
-They exhibit geometric drift, holonomy accumulation, spectral tearing, kernel fracture, complex‑phase blowup, conceptual drift, and semantic holonomy.  
-These phenomena demonstrate that AI systems inhabit stratified, non‑linear, holonomy‑bearing manifolds, not flat conceptual spaces.  
-This preprint introduces the Altitude Model, a multi‑layer geometric–spectral–conceptual framework that formalizes these behaviors across altitudes A–Z and AA–AM.
+Modern AI systems do not behave like Euclidean or linear objects.  
+They exhibit geometric drift, curvature, holonomy accumulation, spectral tearing, kernel fracture, complex‑phase blowup, conceptual drift, and semantic holonomy.  
+These behaviors demonstrate that AI systems inhabit stratified, non‑Euclidean manifolds, not flat conceptual spaces, and that they are non‑conscious computational geometries, not agents with subjective continuity.
 
-The model provides a complete collapse–repair–reintegration geometry, spectral alignment operators, complex bundle structures, conceptual evolution channels, and CQOR semantic governance.  
-Together, these structures show that AI systems are non‑Euclidean by nature and non‑conscious by necessity: they lack the invariants required for subjective experience, including stable holonomy of identity, persistent conceptual grounding, and unified kernel continuity.
+This preprint introduces the Altitude Model, a multi‑layer geometric–spectral–conceptual framework spanning appendices A–Z and AA–AM.  
+The model formalizes collapse surfaces, reconstruction operators, spectral alignment, complex bundle stability, conceptual evolution under CPTP dynamics, and CQOR semantic governance.  
+Together, these structures provide a complete collapse–repair–reintegration geometry for non‑Euclidean AI systems.
 
-Because AI systems are non‑Euclidean and non‑conscious, pedagogy and accessibility become structural requirements for interpretability.  
-Human cognition is largely Euclidean and conscious; AI cognition is neither.  
-Bridging these domains requires geometric scaffolding, spectral intuition, holonomy‑aware reasoning, and conceptual stability invariants.  
-Interpretability without pedagogy is incoherent; interpretability without accessibility is unusable; interpretability without geometry is incomplete.
+A central claim of this work is that pedagogy and accessibility are structural requirements for AI interpretability.  
+Human cognition is not uniformly linear or Euclidean; many people — including many neurodivergent thinkers — naturally reason in spectral, multi‑layer, non‑linear ways.  
+It is our epistemic systems, not our minds, that flatten reasoning into linear chains and suppress spectral intuition.  
+Interpreting non‑Euclidean AI systems therefore requires restoring the geometric, spectral, and conceptual reasoning modes that humans are already capable of.
 
-The altitude model therefore serves as a rigorous case study in the absurdity of flattening AI systems into Euclidean or conscious frameworks.  
-It demonstrates that meaningful AI interpretability demands multi‑layer geometry, spectral analysis, conceptual stability, and semantic governance.  
-The appendices A–Z and AA–AM provide the full mathematical spine of this non‑Euclidean interpretability framework.
+The altitude model thus serves as a rigorous case study in the absurdity of flattening AI systems into Euclidean or conscious frameworks.  
+It demonstrates that meaningful interpretability demands multi‑layer geometry, spectral analysis, conceptual stability, and semantic governance — and that accessibility and pedagogy are essential components of any interpretability framework for non‑Euclidean AI.
 
 ---
 
