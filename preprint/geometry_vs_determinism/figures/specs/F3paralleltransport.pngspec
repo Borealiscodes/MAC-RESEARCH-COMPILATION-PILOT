@@ -1,0 +1,24 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Manifold Patch
+  L2: Curve γ(t)
+    - Same curve as F2 for continuity
+  L3: Vector Transport
+    - Vector v at γ(0)
+    - Same vector transported along γ(t) at t1, t2
+    - Use consistent orientation and magnitude
+    - Transported vectors in orange (#FF8C00FF)
+  L4: Labels
+    - "v" at start
+    - "Parallel Transport" near transported vectors
+  L5: Annotation Overlay
+    - Equation: "∇_{γ̇} V = 0"
+
+Export:
+  PNG (RGBA)
