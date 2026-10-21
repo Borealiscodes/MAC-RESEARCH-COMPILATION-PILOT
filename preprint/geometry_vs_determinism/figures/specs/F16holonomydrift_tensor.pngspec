@@ -1,0 +1,27 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Manifold Patch
+  L2: Two Nearby Points
+    - p and q marked with filled circles
+  L3: Holonomy Loops
+    - Loop at p (green)
+    - Loop at q (green)
+  L4: Vector Transport
+    - v transported around loop at p → v_p'
+    - v transported around loop at q → v_q'
+    - v_p' and v_q' shown in red (#FF0000FF)
+  L5: Drift Visualization
+    - Arrow showing difference between v_p' and v_q'
+    - Labeled "Holonomy Drift"
+  L6: Labels
+    - "H = Hol(p) − Hol(q)"
+    - "Holonomy Drift Tensor"
+
+Export:
+  PNG (RGBA)
