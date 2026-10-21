@@ -1,0 +1,23 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Objects
+    - Three directed graphs: G1, G2, G3
+    - Nodes: circles 80px diameter
+    - Edges: arrows 4px stroke
+  L2: Morphisms
+    - Graph homomorphism arrows labeled φ, ψ
+  L3: Labels
+    - "Category 𝘿𝙞𝙨𝙘𝙧𝙚𝙩𝙚"
+    - "Objects: Directed Graphs / Automata"
+    - "Morphisms: Graph Homomorphisms"
+  L4: Annotation Overlay
+    - Highlight: φ(v) = v', φ(e) = e'
+
+Export:
+  PNG (RGBA)
