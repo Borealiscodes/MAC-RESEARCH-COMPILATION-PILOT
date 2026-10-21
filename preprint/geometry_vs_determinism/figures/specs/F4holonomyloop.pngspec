@@ -1,0 +1,26 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Manifold Patch
+  L2: Closed Loop
+    - Smooth loop based at p
+    - 6px stroke, green (#00FF00FF)
+  L3: Vector Transport
+    - Initial vector v at p
+    - Transported vector after loop: v'
+    - v' rotated relative to v
+    - Use red (#FF0000FF) for v'
+  L4: Labels
+    - "p" at base point
+    - "Holonomy" near loop
+    - "v" and "v'" labeled
+  L5: Annotation Overlay
+    - Equation: "Hol(p): v ↦ v'"
+
+Export:
+  PNG (RGBA)
