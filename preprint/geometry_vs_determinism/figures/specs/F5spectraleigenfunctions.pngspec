@@ -1,0 +1,25 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent (#00000000)
+Stroke: 4px Black (#000000FF)
+Font: Inter-SemiBold 32px White (#FFFFFFFF)
+Grid: 100px major, 20px minor, 20% opacity
+
+Layers:
+  L0: Coordinate Frame
+  L1: Manifold Patch
+    - Same geometry as F1–F4 for continuity
+  L2: Eigenfunction Visualization
+    - Heatmap-style contour lines (monochrome)
+    - Contours: 4px stroke, grayscale (#FFFFFFAA → #000000AA)
+  L3: Eigenfunction Peaks/Troughs
+    - Peaks marked with small white circles
+    - Troughs marked with small black circles
+  L4: Labels
+    - "Eigenfunction φ_k"
+    - "Δφ_k = λ_k φ_k"
+  L5: Annotation Overlay
+    - λ_k displayed near contour set
+
+Export:
+  PNG (RGBA), sRGB, no compression artifacts
