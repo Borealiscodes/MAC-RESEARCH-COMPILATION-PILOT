@@ -1,0 +1,25 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Smooth Side
+    - Manifolds M and N
+    - Smooth maps shown normally
+  L2: Discrete Side
+    - Graphs F(M) and F(N)
+    - A graph morphism φ: F(M) → F(N) drawn in red (#FF0000FF)
+  L3: Missing Preimage Indicator
+    - Dashed arrow on smooth side showing "no corresponding morphism"
+  L4: Labels
+    - "Non-Full"
+    - "φ ∈ Hom_Discrete(F(M), F(N))"
+    - "No f such that F(f) = φ"
+  L5: Annotation Overlay
+    - Red dashed boundary around φ
+
+Export:
+  PNG (RGBA)
