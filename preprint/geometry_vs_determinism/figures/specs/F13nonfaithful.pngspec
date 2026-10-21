@@ -1,0 +1,24 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Smooth Side
+    - Two distinct smooth maps f ≠ g between manifolds M → N
+    - Drawn as two separate curved arrows
+  L2: Discrete Side
+    - Graph F(M) → F(N)
+    - Single arrow representing F(f) = F(g)
+  L3: Functor Arrow
+    - Horizontal arrow labeled "F"
+  L4: Labels
+    - "Non-Faithful"
+    - "f ≠ g but F(f) = F(g)"
+  L5: Annotation Overlay
+    - Highlight: collapse of morphism distinction
+
+Export:
+  PNG (RGBA)
