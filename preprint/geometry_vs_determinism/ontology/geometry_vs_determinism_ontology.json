@@ -1,0 +1,230 @@
+{
+  "ontology": {
+    "A_Geometry_and_Smooth_Manifolds": {
+      "A1_Differential_Geometry": [
+        "Lee, J. M. (2003). Introduction to smooth manifolds. Springer.",
+        "do Carmo, M. P. (1992). Riemannian geometry. Birkhäuser.",
+        "Spivak, M. (1975). A comprehensive introduction to differential geometry (Vols. 1–5). Publish or Perish.",
+        "Warner, F. W. (1983). Foundations of differentiable manifolds and Lie groups. Springer."
+      ],
+      "A2_Holonomy_and_Parallel_Transport": [
+        "Lee (2003)",
+        "do Carmo (1992)"
+      ],
+      "A3_Spectral_and_Operator_Geometry": [
+        "Lee (2003)",
+        "do Carmo (1992)"
+      ],
+      "A4_Continuous_Reasoning_Models": [
+        "Spivey, M. J. (2007). The continuity of mind. Oxford University Press."
+      ]
+    },
+
+    "B_Discrete_Structures_and_Deterministic_Systems": {
+      "B1_Automata_Theory": [
+        "Tyagi, K., & Tripathi, A. (2017). Rough fuzzy automata and rough fuzzy grammar. International Journal of Fuzzy System Applications, 6(1), 36–55.",
+        "Zielenkiewicz, M., & Schubert, A. (2021). Automata theory approach to predicate intuitionistic logic. Journal of Logic and Computation, 32(3), 554–580."
+      ],
+      "B2_Graph_Theory": [
+        "Included implicitly in automata theory sources."
+      ],
+      "B3_Procedural_Logic": [
+        "Sipser, M. (2012). Introduction to the theory of computation. Cengage.",
+        "Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2006). Introduction to automata theory, languages, and computation. Pearson."
+      ],
+      "B4_Legal_Mechanical_Structures": [
+        "Darby v. Cisneros, 509 U.S. 137 (1993).",
+        "Woodford v. Ngo, 548 U.S. 81 (2006).",
+        "Ross v. Blake, 578 U.S. 632 (2016).",
+        "McCarthy v. Madigan, 503 U.S. 140 (1992)."
+      ]
+    },
+
+    "C_Category_Theory_and_Structural_Mappings": {
+      "C1_Categories_of_Smooth_Structures": [
+        "Mac Lane, S. (1998). Categories for the working mathematician. Springer.",
+        "Leinster, T. (2014). Basic category theory. Cambridge University Press."
+      ],
+      "C2_Categories_of_Discrete_Structures": [
+        "Mac Lane (1998)",
+        "Leinster (2014)"
+      ],
+      "C3_Functors_Between_Categories": [
+        "Cordier, J.-M., & Porter, T. (1997). Homotopy coherent category theory. Transactions of the American Mathematical Society, 349(1), 1–54."
+      ],
+      "C4_Applied_Category_Theory": [
+        "Baez, J., Cho, S., Cicala, D., Otter, N., & de Paiva, V. (2022). Applied category theory in chemistry, computing, and social networks. Notices of the American Mathematical Society, 69(2)."
+      ]
+    },
+
+    "D_Cognitive_Flexibility_and_Context_Switching": {
+      "D1_Cognitive_Load_and_Task_Switching": [
+        "Monsell, S. (2003). Task switching. Trends in Cognitive Sciences, 7(3), 134–140.",
+        "von Bastian, C. C., & Druey, M. D. (2017). Shifting between mental sets. Journal of Experimental Psychology: General, 146(9), 1266–1285.",
+        "Lien, M.-C., & Ruthruff, E. (2004). Task switching in a hierarchical task structure. Journal of Experimental Psychology: Learning, Memory, and Cognition, 30(3), 697–713."
+      ],
+      "D2_Mathematical_Cognition": [
+        "Spivey (2007)",
+        "Monsell (2003)"
+      ],
+      "D3_Discontinuity_in_Cognitive_Processes": [
+        "Monsell (2003)",
+        "von Bastian & Druey (2017)"
+      ],
+      "D4_Flexibility_vs_Rigidity": [
+        "Spivey (2007)",
+        "Sipser (2012)"
+      ]
+    },
+
+    "E_Human_Rights_Documentation_and_Structural_Analysis": {
+      "E1_Procedural_Exhaustion": [
+        "Darby v. Cisneros (1993)",
+        "Woodford v. Ngo (2006)",
+        "Ross v. Blake (2016)"
+      ],
+      "E2_Structural_Contradictions": [
+        "McCarthy v. Madigan (1992)",
+        "Ross v. Blake (2016)"
+      ],
+      "E3_Collapse_Surfaces": [
+        "Anchored by exhaustion doctrine cases."
+      ],
+      "E4_Deterministic_Documentation_Frameworks": [
+        "Sipser (2012)",
+        "Hopcroft & Ullman (2006)"
+      ]
+    }
+  }
+}
+
+⭐ The JSON (Stage A + Stage C merged)
+
+`json
+{
+  "ontology": {
+    "AGeometryandSmoothManifolds": {
+      "A1DifferentialGeometry": [
+        "Lee, J. M. (2003). Introduction to smooth manifolds. Springer.",
+        "do Carmo, M. P. (1992). Riemannian geometry. Birkhäuser.",
+        "Spivak, M. (1975). A comprehensive introduction to differential geometry (Vols. 1–5). Publish or Perish.",
+        "Warner, F. W. (1983). Foundations of differentiable manifolds and Lie groups. Springer."
+      ],
+      "A2HolonomyandParallelTransport": [
+        "Lee (2003)",
+        "do Carmo (1992)"
+      ],
+      "A3SpectralandOperatorGeometry": [
+        "Lee (2003)",
+        "do Carmo (1992)"
+      ],
+      "A4ContinuousReasoning_Models": [
+        "Spivey, M. J. (2007). The continuity of mind. Oxford University Press."
+      ]
+    },
+
+    "BDiscreteStructuresandDeterministic_Systems": {
+      "B1AutomataTheory": [
+        "Tyagi, K., & Tripathi, A. (2017). Rough fuzzy automata and rough fuzzy grammar. International Journal of Fuzzy System Applications, 6(1), 36–55.",
+        "Zielenkiewicz, M., & Schubert, A. (2021). Automata theory approach to predicate intuitionistic logic. Journal of Logic and Computation, 32(3), 554–580."
+      ],
+      "B2GraphTheory": [
+        "Included implicitly in automata theory sources."
+      ],
+      "B3ProceduralLogic": [
+        "Sipser, M. (2012). Introduction to the theory of computation. Cengage.",
+        "Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2006). Introduction to automata theory, languages, and computation. Pearson."
+      ],
+      "B4LegalMechanical_Structures": [
+        "Darby v. Cisneros, 509 U.S. 137 (1993).",
+        "Woodford v. Ngo, 548 U.S. 81 (2006).",
+        "Ross v. Blake, 578 U.S. 632 (2016).",
+        "McCarthy v. Madigan, 503 U.S. 140 (1992)."
+      ]
+    },
+
+    "CCategoryTheoryandStructural_Mappings": {
+      "C1CategoriesofSmoothStructures": [
+        "Mac Lane, S. (1998). Categories for the working mathematician. Springer.",
+        "Leinster, T. (2014). Basic category theory. Cambridge University Press."
+      ],
+      "C2CategoriesofDiscreteStructures": [
+        "Mac Lane (1998)",
+        "Leinster (2014)"
+      ],
+      "C3FunctorsBetween_Categories": [
+        "Cordier, J.-M., & Porter, T. (1997). Homotopy coherent category theory. Transactions of the American Mathematical Society, 349(1), 1–54."
+      ],
+      "C4AppliedCategory_Theory": [
+        "Baez, J., Cho, S., Cicala, D., Otter, N., & de Paiva, V. (2022). Applied category theory in chemistry, computing, and social networks. Notices of the American Mathematical Society, 69(2)."
+      ]
+    },
+
+    "DCognitiveFlexibilityandContext_Switching": {
+      "D1CognitiveLoadandTask_Switching": [
+        "Monsell, S. (2003). Task switching. Trends in Cognitive Sciences, 7(3), 134–140.",
+        "von Bastian, C. C., & Druey, M. D. (2017). Shifting between mental sets. Journal of Experimental Psychology: General, 146(9), 1266–1285.",
+        "Lien, M.-C., & Ruthruff, E. (2004). Task switching in a hierarchical task structure. Journal of Experimental Psychology: Learning, Memory, and Cognition, 30(3), 697–713."
+      ],
+      "D2MathematicalCognition": [
+        "Spivey (2007)",
+        "Monsell (2003)"
+      ],
+      "D3DiscontinuityinCognitiveProcesses": [
+        "Monsell (2003)",
+        "von Bastian & Druey (2017)"
+      ],
+      "D4Flexibilityvs_Rigidity": [
+        "Spivey (2007)",
+        "Sipser (2012)"
+      ]
+    },
+
+    "EHumanRightsDocumentationandStructuralAnalysis": {
+      "E1ProceduralExhaustion": [
+        "Darby v. Cisneros (1993)",
+        "Woodford v. Ngo (2006)",
+        "Ross v. Blake (2016)"
+      ],
+      "E2StructuralContradictions": [
+        "McCarthy v. Madigan (1992)",
+        "Ross v. Blake (2016)"
+      ],
+      "E3CollapseSurfaces": [
+        "Anchored by exhaustion doctrine cases."
+      ],
+      "E4DeterministicDocumentation_Frameworks": [
+        "Sipser (2012)",
+        "Hopcroft & Ullman (2006)"
+      ]
+    }
+  }
+}
+`
+
+---
+
+⭐ Provenance Footer (for the JSON file)
+
+`
+---
+Artifact: Geometry vs Determinism — APA-Infused Citation Ontology (Stage C)
+Repository: MAC-RESEARCH-COMPILATION-PILOT / preprint / geometryvsdeterminism / ontology
+Altitude: Research Compilation • Machine-Readable Ontology • APA Reference Integration
+
+Purpose:
+  Provide a structured, machine-readable ontology linking conceptual domains
+  (geometry, automata theory, category theory, cognitive switching, legal exhaustion)
+  to authoritative APA-formatted references for use in preprint drafting and tooling.
+
+Compiler: Microsoft Copilot
+Maintainer: Borealis S. Hedling
+Location: Dublin, Ireland
+Timestamp: 21 October 2026 — 01:27 IST
+Version: v1.0
+Seal: PREPRINT.GEOMDET.ONTOLOGY.STAGEC
+---
+`
+
+---
+
