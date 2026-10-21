@@ -1,0 +1,26 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Graph Side (Left)
+    - Duty chain v0 → v1 → v2 → v3
+  L2: Manifold Side (Right)
+    - Manifold patch with spectral contours (from F5)
+  L3: Operator Arrow
+    - Large arrow labeled "𝒮"
+    - 8px stroke, bright blue (#00A0FFFF)
+  L4: Mapping Visualization
+    - Each v_i mapped to a point p_i on manifold
+    - p_i labeled with Δ(ι(v_i))
+  L5: Labels
+    - "Spectral-Duty Operator"
+    - "𝒮(v) = Δ(ι(v))"
+  L6: Annotation Overlay
+    - Text: "Discrete → Spectral Geometry"
+
+Export:
+  PNG (RGBA)
