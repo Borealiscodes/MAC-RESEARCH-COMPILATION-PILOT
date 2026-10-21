@@ -1,0 +1,27 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Input Reasoning Graph
+    - Nodes representing reasoning states
+    - Edges representing transitions
+  L2: Discontinuity Highlight
+    - Red jagged region indicating cognitive discontinuity
+  L3: Stabilizer Operator
+    - Large arrow labeled "𝒧"
+    - 8px stroke, bright blue (#00A0FFFF)
+  L4: Output Graph
+    - Same graph but discontinuity region smoothed
+    - Red region replaced with smooth curve
+  L5: Labels
+    - "Cognitive Load Stabilizer"
+    - "𝒧(R) = R − discontinuity penalty"
+  L6: Annotation Overlay
+    - Text: "Stabilized reasoning trajectory"
+
+Export:
+  PNG (RGBA)
