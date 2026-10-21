@@ -1,0 +1,24 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent (#00000000)
+Stroke: 4px Black (#000000FF)
+Font: Inter-SemiBold 32px White (#FFFFFFFF)
+Grid: 100px major, 20px minor, 20% opacity
+
+Layers:
+  L0: Coordinate Frame
+  L1: Objects
+    - Three manifold icons: M1, M2, M3
+    - Smooth curved shapes, 6px stroke
+  L2: Morphisms
+    - Arrows between manifolds labeled f, g, h
+    - Smooth-map arrows: curved, 4px stroke
+  L3: Labels
+    - "Category 𝙎𝙢𝙤𝙤𝙩𝙝"
+    - "Objects: Smooth Manifolds"
+    - "Morphisms: Smooth Maps"
+  L4: Annotation Overlay
+    - Commutative triangle with f ∘ g = h
+
+Export:
+  PNG (RGBA), sRGB
