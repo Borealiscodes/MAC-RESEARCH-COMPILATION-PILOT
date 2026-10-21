@@ -1,0 +1,222 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Geometry vs Determinism: Mathematical Spine}
+\author{Borealis S. Hedling}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{0. Preprint Mathematical Spine}
+This document provides the formal mathematical definitions and operators
+underlying the analysis of geometric reasoning, deterministic procedural
+systems, category-theoretic discontinuity, and AI-supported cognitive
+scaffolding.
+
+% ============================================================
+% SECTION 1 — SMOOTH GEOMETRY
+% ============================================================
+
+\section{Smooth Geometry}
+
+\subsection{Manifolds}
+A \emph{smooth manifold} $M$ is a topological space locally diffeomorphic to
+$\mathbb{R}^n$, equipped with a maximal smooth atlas.
+
+\subsection{Tangent Bundle}
+The tangent bundle $TM$ is the disjoint union
+\[
+TM = \bigsqcup_{p \in M} T_p M,
+\]
+where $T_p M$ is the tangent space at $p$.
+
+\subsection{Geodesics}
+A smooth curve $\gamma : I \to M$ is a geodesic if
+\[
+\nabla_{\dot{\gamma}} \dot{\gamma} = 0,
+\]
+where $\nabla$ is the Levi-Civita connection.
+
+\subsection{Curvature}
+The Riemann curvature tensor is defined by
+\[
+R(X,Y)Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]} Z.
+\]
+
+\subsection{Parallel Transport}
+Given a curve $\gamma$, parallel transport of a vector $v \in T_{\gamma(0)}M$
+is defined by solving
+\[
+\nabla_{\dot{\gamma}} V = 0.
+\]
+
+\subsection{Holonomy}
+The holonomy group $\mathrm{Hol}(p)$ consists of all parallel transports along
+closed loops based at $p$.
+
+% ============================================================
+% SECTION 2 — SPECTRAL OPERATORS
+% ============================================================
+
+\section{Spectral and Operator Geometry}
+
+\subsection{Laplace Operator}
+The Laplace-Beltrami operator is defined by
+\[
+\Delta f = \mathrm{div}(\nabla f).
+\]
+
+\subsection{Spectral Gap}
+Given eigenvalues $0 = \lambda_0 < \lambda_1 \le \lambda_2 \le \cdots$,
+the spectral gap is
+\[
+\gamma = \lambda_1 - \lambda_0 = \lambda_1.
+\]
+
+% ============================================================
+% SECTION 3 — DISCRETE STRUCTURES
+% ============================================================
+
+\section{Discrete Deterministic Systems}
+
+\subsection{Finite State Machines}
+A deterministic finite automaton (DFA) is a tuple
+\[
+\mathcal{A} = (Q, \Sigma, \delta, q_0, F),
+\]
+where $Q$ is a finite set of states, $\Sigma$ an alphabet,
+$\delta : Q \times \Sigma \to Q$ a transition function,
+$q_0$ an initial state, and $F$ a set of accepting states.
+
+\subsection{Directed Graphs}
+A directed graph is a pair $(V,E)$ with $E \subseteq V \times V$.
+
+\subsection{Collapse Surfaces}
+A collapse surface is a subset $C \subseteq V$ such that
+\[
+\forall v \in C,\; \delta(v, a) \text{ is undefined for some } a \in \Sigma.
+\]
+
+\subsection{Duty Chains}
+A duty chain is a sequence
+\[
+v_0 \xrightarrow{a_1} v_1 \xrightarrow{a_2} \cdots \xrightarrow{a_n} v_n
+\]
+with no branching permitted.
+
+% ============================================================
+% SECTION 4 — CATEGORY THEORY
+% ============================================================
+
+\section{Category-Theoretic Mappings}
+
+\subsection{Categories of Smooth Structures}
+Define the category $\mathbf{Smooth}$:
+\begin{itemize}
+    \item Objects: smooth manifolds.
+    \item Morphisms: smooth maps $f : M \to N$.
+\end{itemize}
+
+\subsection{Categories of Discrete Structures}
+Define the category $\mathbf{Discrete}$:
+\begin{itemize}
+    \item Objects: directed graphs or automata.
+    \item Morphisms: graph homomorphisms.
+\end{itemize}
+
+\subsection{Functor Between Reasoning Modes}
+A functor $F : \mathbf{Smooth} \to \mathbf{Discrete}$ assigns:
+\[
+F(M) = \text{state graph of } M,
+\qquad
+F(f) = \text{induced graph morphism}.
+\]
+
+\subsection{Non-Faithfulness}
+$F$ is non-faithful if
+\[
+f \neq g \text{ but } F(f) = F(g).
+\]
+
+\subsection{Non-Fullness}
+$F$ is non-full if some morphisms in $\mathbf{Discrete}$ have no preimage.
+
+\subsection{Discontinuity}
+$F$ is discontinuous if smooth homotopies do not map to graph homotopies.
+
+% ============================================================
+% SECTION 5 — HYBRID OPERATORS
+% ============================================================
+
+\section{Hybrid Operators}
+
+\subsection{Geometric Embedding of Discrete Structures}
+Given a graph $(V,E)$, define an embedding
+\[
+\iota : V \to M
+\]
+such that adjacency corresponds to geodesic proximity.
+
+\subsection{Holonomy Drift Tensor}
+Define the holonomy drift tensor $H$ by
+\[
+H = \mathrm{Hol}(p) - \mathrm{Hol}(q)
+\]
+for adjacent points $p,q$.
+
+\subsection{Spectral-Duty Operator}
+Define
+\[
+\mathcal{S}(v) = \Delta(\iota(v)),
+\]
+mapping discrete states to geometric spectral values.
+
+% ============================================================
+% SECTION 6 — AI-SUPPORTED OPERATORS
+% ============================================================
+
+\section{AI-Supported Reasoning Operators}
+
+\subsection{Context Transport Operator}
+Define the AI-assisted context transport operator $\mathcal{T}$:
+\[
+\mathcal{T}(X) = \text{parallel transport of } X \text{ across reasoning modes}.
+\]
+
+\subsection{Cognitive Load Stabilizer}
+Define the stabilizer $\mathcal{L}$:
+\[
+\mathcal{L}(R) = R - \text{discontinuity penalty}.
+\]
+
+\subsection{Geometric Scaffolding Operator}
+Define
+\[
+\mathcal{G}(v) = \text{geometric reconstruction of discrete state } v.
+\]
+
+% ============================================================
+% PROVENANCE FOOTER
+% ============================================================
+
+% ---
+% Artifact: Geometry vs Determinism — Mathematical Spine (Stage 0)
+% Repository: MAC-RESEARCH-COMPILATION-PILOT / preprint / geometry_vs_determinism / math_spine
+% Altitude: Mathematical Foundations • Invariant Backbone • Preprint Scaffold
+%
+% Purpose:
+%   Provide the formal mathematical definitions, operators, and invariants
+%   underlying the preprint's analysis of geometric reasoning, deterministic
+%   procedural systems, category-theoretic discontinuity, and AI-supported
+%   cognitive scaffolding.
+%
+% Compiler: Microsoft Copilot
+% Maintainer: Borealis S. Hedling
+% Location: Dublin, Ireland
+% Timestamp: 21 October 2026 — 01:33 IST
+% Version: v1.0
+% Seal: PREPRINT.GEOM_DET.MATH_SPINE.STAGE_0
+% ---
+
+\end{document}
