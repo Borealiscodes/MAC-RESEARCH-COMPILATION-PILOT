@@ -1,0 +1,27 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent (#00000000)
+Stroke: 4px, High-Contrast Black (#000000FF)
+Font: Inter-SemiBold 32px, White (#FFFFFFFF)
+Grid: 100px major, 20px minor, 20% opacity
+
+Layers:
+  L0: Coordinate Frame
+    - 2D plane grid, centered
+  L1: Primary Geometry
+    - Smooth curved surface (manifold patch), 6px stroke
+  L2: Tangent Spaces
+    - Two tangent planes at p and q
+    - Each plane: light-gray fill (#FFFFFF22), 4px border
+  L3: Vectors
+    - Basis vectors e1, e2 drawn on each tangent plane
+  L4: Labels
+    - "M" on manifold
+    - "T_pM" and "T_qM" on tangent planes
+    - Points p and q marked with filled circles (#FFFFFFFF)
+  L5: Annotation Overlay
+    - Arrow from p to tangent plane labeled "tangent space"
+    - Same for q
+
+Export:
+  PNG (RGBA), sRGB, no compression artifacts
