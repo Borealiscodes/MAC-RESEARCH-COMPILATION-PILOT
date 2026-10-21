@@ -1,0 +1,27 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent (#00000000)
+Stroke: 4px Black (#000000FF)
+Font: Inter-SemiBold 32px White (#FFFFFFFF)
+Grid: 100px major, 20px minor, 20% opacity
+
+Layers:
+  L0: Coordinate Frame
+  L1: Manifold Patch
+    - Smooth curved surface, consistent with F1–F4
+  L2: Graph Structure
+    - Nodes v0, v1, v2
+    - Edges drawn as straight arrows
+    - Graph drawn floating above manifold
+  L3: Embedding Map
+    - Arrows from each node v_i to points p_i on the manifold
+    - 6px stroke, bright blue (#00A0FFFF)
+  L4: Labels
+    - "Graph G"
+    - "Embedding ι : V → M"
+    - "ι(v_i) = p_i"
+  L5: Annotation Overlay
+    - Text: "Adjacency ↦ Geodesic Proximity"
+
+Export:
+  PNG (RGBA), sRGB
