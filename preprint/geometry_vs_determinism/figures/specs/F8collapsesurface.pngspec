@@ -1,0 +1,23 @@
+PNG-SPEC v1.2 HIGH-FIDELITY
+Canvas: 2400x1600 px
+Background: Transparent
+Stroke: 4px Black
+Font: Inter-SemiBold 32px White
+
+Layers:
+  L0: Coordinate Frame
+  L1: Graph Structure
+    - Nodes v0, v1, v2, v3
+    - Edges between v0→v1→v2
+  L2: Collapse Surface Highlight
+    - Node v3 marked in red (#FF0000FF)
+    - No outgoing edges from v3
+    - Dashed boundary around v3 (6px red dashed)
+  L3: Labels
+    - "Collapse Surface C"
+    - "Undefined δ(v3, a)"
+  L4: Annotation Overlay
+    - Arrow pointing to v3 labeled "dead zone"
+
+Export:
+  PNG (RGBA)
